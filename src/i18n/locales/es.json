@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy",
+        "cta": "Ver proyectos",
+        "contact": "Contactar"
+    },
+    "about": {
+        "title": "Stack Tecnológico",
+        "description": "Tecnologías y herramientas con las que trabajo"
+    },
+    "experience": {
+        "title": "Experiencia",
+        "work": "Experiencia Laboral",
+        "education": "Educación",
+        "present": "Presente"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "description": "Aplicaciones y proyectos destacados que he desarrollado",
+        "viewRepo": "Ver repositorio",
+        "viewDemo": "Ver demo",
+        "featured": "Destacado",
+        "all": "Todos"
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "¿Hablamos? Estoy disponible para nuevos proyectos y oportunidades",
+        "downloadCV": "Descargar CV",
+        "email": "Email",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+    },
+    "footer": {
+        "rights": "Todos los derechos reservados",
+        "madeWith": "Hecho con",
+        "by": "por"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, I'm",
+        "cta": "View projects",
+        "contact": "Get in touch"
+    },
+    "about": {
+        "title": "Tech Stack",
+        "description": "Technologies and tools I work with"
+    },
+    "experience": {
+        "title": "Experience",
+        "work": "Work Experience",
+        "education": "Education",
+        "present": "Present"
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Featured applications and projects I've developed",
+        "viewRepo": "View repository",
+        "viewDemo": "View demo",
+        "featured": "Featured",
+        "all": "All"
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Let's talk! I'm available for new projects and opportunities",
+        "downloadCV": "Download CV",
+        "email": "Email",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+    },
+    "footer": {
+        "rights": "All rights reserved",
+        "madeWith": "Made with",
+        "by": "by"
+    }
+}
