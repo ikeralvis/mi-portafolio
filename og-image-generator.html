@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator - Iker Alvis</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .og-card {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            border-radius: 0;
+            /* Sin border radius para OG image */
+        }
+
+        /* Glassmorphism effect */
+        .og-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .og-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 100px;
+            color: white;
+        }
+
+        .og-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 40px;
+            object-fit: cover;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .og-name {
+            font-size: 72px;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+            letter-spacing: -2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .og-role {
+            font-size: 48px;
+            font-weight: 400;
+            margin: 0 0 40px 0;
+            opacity: 0.95;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .og-tech {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .og-tech-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-size: 24px;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .og-url {
+            position: absolute;
+            bottom: 60px;
+            right: 100px;
+            font-size: 28px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .instructions {
+            max-width: 1200px;
+            margin-top: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            color: #333;
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .instructions ol {
+            line-height: 1.8;
+        }
+
+        .instructions code {
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- La imagen OG que aparecerá en redes sociales -->
+    <div>
+        <div class="og-card" id="og-card">
+            <div class="og-content">
+                <!-- Opcional: Añade tu foto aquí -->
+                <!-- <img src="/yo.JPG" alt="Iker Alvis" class="og-photo"> -->
+
+                <h1 class="og-name">Iker Alvis Veloso</h1>
+                <p class="og-role">Frontend Developer</p>
+
+                <div class="og-tech">
+                    <span class="og-tech-item">⚛️ React</span>
+                    <span class="og-tech-item">▲ Next.js</span>
+                    <span class="og-tech-item">📘 TypeScript</span>
+                    <span class="og-tech-item">🎨 Tailwind</span>
+                </div>
+
+                <div class="og-url">ikeralvis-dev.vercel.app</div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>📸 Cómo generar tu imagen Open Graph</h2>
+            <ol>
+                <li>Abre este archivo HTML en tu navegador</li>
+                <li>Ajusta el tamaño de la ventana a 1200x630px (puedes usar extensiones como "Window Resizer")</li>
+                <li>Toma una captura de pantalla de la card morada con <code>Win + Shift + S</code></li>
+                <li>O usa F12 > Device Toolbar > Custom 1200x630</li>
+                <li>Guarda la imagen como <code>og-image.png</code> en <code>/public/</code></li>
+            </ol>
+
+            <h3>✨ Alternativas más fáciles:</h3>
+            <ul>
+                <li><strong>Canva:</strong> https://canva.com - Busca plantilla "Open Graph" o "Social Media Post
+                    1200x630"</li>
+                <li><strong>Figma:</strong> https://figma.com - Crea un frame de 1200x630px</li>
+                <li><strong>OG Image Playground:</strong> https://og-playground.vercel.app/</li>
+                <li><strong>Screely:</strong> https://screely.com - Da estilo profesional a capturas</li>
+            </ul>
+
+            <h3>💡 Tips:</h3>
+            <ul>
+                <li>Usa colores que combinen con tu portfolio</li>
+                <li>Texto legible (mínimo 36px)</li>
+                <li>Añade tu foto para hacerlo más personal</li>
+                <li>Incluye 3-4 tecnologías clave</li>
+                <li>Formato PNG con buena calidad</li>
+            </ul>
+
+            <h3>🎨 Personaliza los colores:</h3>
+            <p>Edita el CSS del gradient en línea 17:</p>
+            <code>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</code>
+            <p>Prueba estos gradients:</p>
+            <ul>
+                <li>🔵 Azul tech: <code>#2196F3, #1976D2</code></li>
+                <li>🟣 Morado moderno: <code>#667eea, #764ba2</code></li>
+                <li>🌈 Arcoíris: <code>#667eea, #f093fb, #764ba2</code></li>
+                <li>⚫ Dark mode: <code>#1a1a1a, #2d2d2d</code></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

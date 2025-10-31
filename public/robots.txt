@@ -1,0 +1,9 @@
+# robots.txt para ikeralvis-dev.vercel.app
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ikeralvis-dev.vercel.app/sitemap.xml
+
+# Disallow sensitive paths (none for now)
+# Disallow: /admin/
