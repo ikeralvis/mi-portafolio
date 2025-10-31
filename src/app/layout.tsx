@@ -85,6 +85,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="dark">
       <head>
+        <meta name="google-site-verification" content="tiZShbIP9iXkI7sKRl0uBUpEPisZGATKlzLvP_czs6I" />
         <link rel="canonical" href="https://ikeralvis-dev.vercel.app" />
         <meta name="theme-color" content="#000000" />
         <script
