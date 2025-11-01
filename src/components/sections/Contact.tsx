@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
+import { useLocale } from '@/contexts/LocaleContext';
 
 export default function Contact() {
   const t = useTranslations('contact');
   const tFooter = useTranslations('footer');
+  const { locale } = useLocale();
 
   const socialLinks = [
     {
@@ -49,7 +51,7 @@ export default function Contact() {
 
           {/* CV Download Button */}
           <motion.a
-            href={portfolioData.personal.cv}
+            href={locale === 'en' ? '/CV_Iker_En.pdf' : portfolioData.personal.cv}
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

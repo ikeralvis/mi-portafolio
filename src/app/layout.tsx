@@ -9,17 +9,18 @@ import LanguageSwitch from '@/components/LanguageSwitch';
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: 'swap', // AGREGAR: evita FOIT (Flash of Invisible Text)
+  preload: true,
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ikeralvis-dev.vercel.app'),
   title: {
-    default: "Iker Alvis Veloso | Frontend Developer",
+    default: "Iker Alvis Veloso | Frontend Developer & Ingeniero",
     template: "%s | Iker Alvis"
   },
-  description: "Desarrollador Frontend en React, Next.js. Portfolio con proyectos reales.",
+  description: "Estudiante de Ingeniería Informática y Frontend Developer. Experiencia en Ayesa con React, Next.js y Liferay. Portfolio con proyectos reales.",
   keywords: [
-    "Iker Alvis",
     "Iker Alvis Veloso",
     "Frontend Developer",
     "Desarrollador Frontend",
@@ -27,15 +28,17 @@ export const metadata: Metadata = {
     "Next.js",
     "TypeScript",
     "JavaScript",
+    "Liferay",
     "Tailwind CSS",
-    "Liferay Developer",
     "Portfolio",
-    "Web Developer",
     "Ayesa",
-    "Universidad Deusto",
+    "Universidad de Deusto",
     "Bilbao",
     "España",
-    "Spain"
+    "Estudiante de Ingeniería Informática",
+    "Frontend en formación",
+    "Proyectos con React",
+    "Desarrollo web moderno"
   ],
   authors: [{ name: "Iker Alvis Veloso", url: "https://github.com/ikeralvis" }],
   creator: "Iker Alvis Veloso",
@@ -56,8 +59,8 @@ export const metadata: Metadata = {
     locale: "es_ES",
     alternateLocale: ["en_US"],
     url: "https://ikeralvis-dev.vercel.app",
-    title: "Iker Alvis Veloso | Frontend Developer",
-    description: "Portfolio profesional de Iker Alvis Veloso. Desarrollador Frontend con experiencia en React, Next.js, Liferay y tecnologías modernas.",
+    title: "Iker Alvis Veloso | Frontend Developer en formación",
+    description: "Portfolio profesional de Iker Alvis Veloso. Estudiante de Ingeniería Informática y desarrollador Frontend con experiencia en React, Next.js y Liferay (Ayesa).",
     siteName: "Iker Alvis Portfolio",
     images: [
       {
@@ -70,12 +73,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iker Alvis Veloso | Frontend Developer",
-    description: "Portfolio profesional - React, Next.js, TypeScript, Liferay",
+    title: "Iker Alvis Veloso | Frontend Developer en formación",
+    description: "Portfolio personal: React, Next.js, TypeScript y Liferay. Estudiante de Ingeniería Informática en Deusto.",
     images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://ikeralvis-dev.vercel.app",
+
   },
 };
 
@@ -90,6 +94,10 @@ export default function RootLayout({
         <meta name="google-site-verification" content="tiZShbIP9iXkI7sKRl0uBUpEPisZGATKlzLvP_czs6I" />
         <link rel="canonical" href="https://ikeralvis-dev.vercel.app" />
         <meta name="theme-color" content="#000000" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,22 +105,30 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Iker Alvis Veloso",
-              jobTitle: "Frontend Developer",
+              jobTitle: "Frontend Developer en formación",
               url: "https://ikeralvis-dev.vercel.app",
               image: "https://ikeralvis-dev.vercel.app/yo.JPG",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Bilbao",
+                addressRegion: "País Vasco",
+                addressCountry: "ES"
+              },
               sameAs: [
                 "https://github.com/ikeralvis",
                 "https://linkedin.com/in/iker-veloso",
               ],
-              alumniOf: {
+              affiliation: {
                 "@type": "EducationalOrganization",
                 name: "Universidad de Deusto",
-                url: "https://www.deusto.es"
+                url: "https://www.deusto.es",
+                sameAs: "https://es.linkedin.com/school/deusto/"
               },
               worksFor: {
                 "@type": "Organization",
                 name: "Ayesa",
-                url: "https://www.ayesa.com"
+                url: "https://www.ayesa.com",
+                sameAs: "https://es.linkedin.com/company/ayesa/"
               },
               knowsAbout: [
                 "React",
@@ -124,7 +140,7 @@ export default function RootLayout({
                 "Frontend Development",
                 "Web Development"
               ],
-              description: "Desarrollador Frontend especializado en React, Next.js y Liferay con experiencia en Ayesa"
+              description: "Estudiante de Ingeniería Informática y desarrollador Frontend en formación con experiencia en Liferay, React y Next.js."
             })
           }}
         />

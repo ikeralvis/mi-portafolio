@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from '@/hooks/useTranslations';
-import { ExternalLink, Github, Star } from 'lucide-react';
+import { ExternalLink, Code2, Star } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import { useState } from 'react';
 import { getIconForTech } from '@/lib/techIcons';
@@ -107,6 +107,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 ) : (
@@ -161,7 +162,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition-all hover:bg-white/10 hover:text-white"
                     >
-                      <Github className="h-4 w-4" />
+                      <Code2 className="h-4 w-4" />
                       Código
                     </a>
                   )}
