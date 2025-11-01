@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "Iker Alvis Veloso | Frontend Developer",
     template: "%s | Iker Alvis"
   },
-  description: "Desarrollador Frontend especializado en React, Next.js, TypeScript y Liferay. Experiencia en Ayesa desarrollando portales web. Estudiante de Ingeniería Informática en Universidad de Deusto.",
+  description: "Desarrollador Frontend en React, Next.js. Portfolio con proyectos reales.",
   keywords: [
     "Iker Alvis",
     "Iker Alvis Veloso",
@@ -85,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
+    <html lang="es-ES" className="dark">
       <head>
         <meta name="google-site-verification" content="tiZShbIP9iXkI7sKRl0uBUpEPisZGATKlzLvP_czs6I" />
         <link rel="canonical" href="https://ikeralvis-dev.vercel.app" />
