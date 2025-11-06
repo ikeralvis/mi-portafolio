@@ -20,7 +20,7 @@ export interface PortfolioData {
     company: string;
     companyLogo?: string;
     period: string;
-    description: string;
+    description: string | string[];
     type: 'work' | 'education';
   }[];
   projects: {
@@ -40,7 +40,7 @@ export const portfolioData: PortfolioData = {
     name: "Iker Alvis Veloso",
     role: "Frontend Developer",
     bio: "Estudiante de Ingeniería Informática con experiencia práctica como desarrollador Front-end en Ayesa, especializado en la implementación de portales y aplicaciones con React.js y Liferay. Dominio de la metodología Scrum y de los fundamentos de programación con Java. Persona proactiva y orientada a resultados, enfocada en la calidad del código, el aprendizaje continuo y la colaboración en equipos multidisciplinares para entregar soluciones innovadoras y de valor.",
-    photo: "/yo.JPG", 
+    photo: "/yo.JPG",
     cv: "/CV_Iker_Es.pdf"
   },
   social: {
@@ -51,36 +51,46 @@ export const portfolioData: PortfolioData = {
   stack: [
     {
       category: "Frontend",
-      technologies: ["React", "Next.js", "Tailwind CSS"]
+      technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript", "HTML", "CSS", "JavaScript"]
     },
     {
       category: "Backend",
-      technologies: ["Node.js", "Java"]
+      technologies: ["Node.js", "Java", "Django"]
     },
     {
       category: "Database",
-      technologies: ["MongoDB", "PostgreSQL"]
+      technologies: ["MongoDB", "PostgreSQL", "Firebase", "MySQL"]
     },
     {
       category: "Tools & Others",
-      technologies: ["Docker", "Git", "Figma", "Scrum", "IA Generativa"]
+      technologies: ["Docker", "Git", "Figma", "Scrum", "IA Generativa", "Vite"]
     }
   ],
   experience: [
     {
       position: "Desarrollador Front-End",
       company: "Ayesa",
-      companyLogo: "/logos/ayesa.png", // Añade el logo de Ayesa en /public/logos/
-      period: "Junio 2024 - Agosto 2025",
-      description: "Desarrollo en Liferay Portales con tecnologías modernas. JavaScript avanzado, componentes reutilizables y optimización de rendimiento.",
+      companyLogo: "/logos/ayesa.png",
+      period: "Junio 2025 - Actualmente",
+      description: [
+        "Desarrollo e implementación de páginas y componentes en portales <strong>Liferay</strong>.",
+        "Creación de funcionalidades complejas y modulares usando <strong>Client Extensions</strong> basadas en <strong>React.js</strong> y <strong>JavaScript (ES6+)</strong>.",
+        "Responsable de la corrección de <strong>bugs</strong> y el mantenimiento evolutivo de las aplicaciones para asegurar un óptimo rendimiento.",
+        "Colaboración en equipos multidisciplinares aplicando la metodología ágil <strong>Scrum</strong>."
+      ],
       type: "work"
     },
     {
       position: "Ingeniería Informática",
       company: "Universidad de Deusto",
-      companyLogo: "/logos/deusto.png", // Añade el logo de Deusto en /public/logos/
-      period: "Sep 2022 - Jun 2026",
-      description: "Grado en Ingeniería Informática con especialización en desarrollo web y arquitectura de software.",
+      companyLogo: "/logos/deusto.png",
+      period: "Sep 2022 - Actualmente",
+      description: [
+        "Formación integral en desarrollo de software y gestión de proyectos tecnológicos en la Universidad de Deusto.",
+        "Conocimientos clave: Desarrollo Front-end (<strong>HTML, CSS, JavaScript, React</strong>), Back-end (<strong>Java, Python, C/C++</strong>), Bases de Datos (<strong>SQL, MySQL</strong>).",
+        "Especializado en metodologías ágiles (<strong>Scrum</strong>) y principios de <strong>Arquitectura de Software</strong> y POO.",
+        "Modelo educativo práctico con foco en la ética y la innovación tecnológica."
+      ],
       type: "education"
     }
   ],
@@ -109,7 +119,7 @@ export const portfolioData: PortfolioData = {
       id: "cityinsight",
       name: "CityInsight",
       description: "🏆 1er Puesto OA6 University Deusto. Plataforma inteligente con IA generativa para mejorar la calidad de vida ciudadana, detectando problemas y ofreciendo soluciones rápidas a los gobiernos.",
-      technologies: ["React", "IA Generativa", "IBM Watson", "Tailwind CSS"],
+      technologies: ["HTML", "CSS", "JavaScript", "IA Generativa"],
       repoUrl: "https://github.com/ikeralvis/CityInsight",
       demoUrl: "https://ikeralvis.github.io/CityInsight/",
       image: "/projects/cityinsight.png",
@@ -140,6 +150,24 @@ export const portfolioData: PortfolioData = {
       technologies: ["Django", "HTML5", "CSS3", "Python"],
       repoUrl: "https://github.com/ikeralvis/GaleriaArte-IW",
       image: "/projects/galeria.png"
+    },
+    {
+      id: "skin-care-routine",
+      name: "Skin Care Routine",
+      description: "Aplicación web para gestionar y seguir rutinas de cuidado de la piel. Permite a los usuarios registrar productos, realizar un seguimiento de su uso y obtener recomendaciones personalizadas.",
+      technologies: ["React", "Vite", "Tailwind CSS", "Firebase Auth", "Firebase Firestore"],
+      repoUrl: "https://github.com/ikeralvis/skincare-app",
+      demoUrl: "https://mikelskinrutine.netlify.app/",
+      image: "/projects/skin-care-routine.png"
+    },
+    {
+      id: "tu-clima",
+      name: "Tu Clima",
+      description: "Aplicación web para consultar el clima en tiempo real. Permite a los usuarios buscar ciudades y ver la previsión del tiempo.",
+      technologies: ["React", "Vite", "Tailwind CSS", "OpenWeather API"],
+      repoUrl: "https://github.com/ikeralvis/mi-app-clima",
+      demoUrl: "https://tu-clima-app.netlify.app/",
+      image: "/projects/tu-clima.png"
     }
   ]
 };

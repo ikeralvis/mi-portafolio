@@ -23,7 +23,7 @@ export default function Experience() {
       <div className="mb-4 flex items-start gap-4">
         {/* Logo de la empresa/universidad */}
         {experience.companyLogo ? (
-          <div className="glass-strong relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg p-2">
+          <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-white p-2">
             <Image
               src={experience.companyLogo}
               alt={`${experience.company} logo`}
@@ -41,7 +41,7 @@ export default function Experience() {
             )}
           </div>
         )}
-        
+
         {/* Información */}
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-white">
@@ -51,7 +51,15 @@ export default function Experience() {
           <p className="mt-1 text-sm text-gray-500">{experience.period}</p>
         </div>
       </div>
-      <p className="text-gray-300">{experience.description}</p>
+      {Array.isArray(experience.description) ? (
+        <ul className="list-disc space-y-2 pl-5 text-gray-300">
+          {experience.description.map((point, i) => (
+            <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
+          ))}
+        </ul>
+      ) : (
+        <p className="text-gray-300">{experience.description}</p>
+      )}
     </motion.div>
   );
 
