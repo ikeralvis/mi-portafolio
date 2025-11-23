@@ -168,6 +168,16 @@ export const portfolioData: PortfolioData = {
       repoUrl: "https://github.com/ikeralvis/mi-app-clima",
       demoUrl: "https://tu-clima-app.netlify.app/",
       image: "/projects/tu-clima.png"
+    }, 
+    {
+      id: "countrip",
+      name: "Countrip",
+      description: "Aplicacion que permite registrar los viajes que has hecho.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+      repoUrl: "https://github.com/ikeralvis/countrip",
+      demoUrl: "https://countrip.vercel.app/",
+      image: "/projects/countrip.png"
     }
+    
   ]
 };
