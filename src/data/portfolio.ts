@@ -161,13 +161,13 @@ export const portfolioData: PortfolioData = {
       image: "/projects/skin-care-routine.png"
     },
     {
-      id: "tu-clima",
-      name: "Tu Clima",
+      id: "mitiempo-app",
+      name: "Mi Tiempo",
       description: "Aplicación web para consultar el clima en tiempo real. Permite a los usuarios buscar ciudades y ver la previsión del tiempo.",
-      technologies: ["React", "Vite", "Tailwind CSS", "OpenWeather API"],
-      repoUrl: "https://github.com/ikeralvis/mi-app-clima",
-      demoUrl: "https://tu-clima-app.netlify.app/",
-      image: "/projects/tu-clima.png"
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "OpenWeather API"],
+      repoUrl: "https://github.com/ikeralvis/mitiempo-app",
+      demoUrl: "https://mitiempo-app.vercel.app/",
+      image: "/projects/mi-tiempo.png"
     }, 
     {
       id: "countrip",
