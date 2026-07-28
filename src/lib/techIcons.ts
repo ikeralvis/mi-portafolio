@@ -1,7 +1,7 @@
 import { IconType } from 'react-icons';
-import { 
-  SiReact, 
-  SiNextdotjs, 
+import {
+  SiReact,
+  SiNextdotjs,
   SiTailwindcss,
   SiTypescript,
   SiNodedotjs,
@@ -11,13 +11,20 @@ import {
   SiGit,
   SiFigma,
   SiJira,
-  SiOpenai, 
+  SiOpenai,
   SiVite,
   SiDjango,
   SiFirebase,
-  SiMysql 
+  SiMysql,
+  SiFastify,
+  SiFastapi,
+  SiPython,
+  SiGooglecloud,
+  SiGooglegemini,
+  SiPwa,
 } from 'react-icons/si';
-import { FaJava, FaHtml5, FaCss3Alt , FaJsSquare  } from 'react-icons/fa';
+import { FaJava, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
+import { TrendingUp } from 'lucide-react';
 
 export interface TechIconMap {
   [key: string]: {
@@ -34,21 +41,32 @@ export const techIcons: TechIconMap = {
   'Tailwind CSS': { icon: SiTailwindcss, color: '#06B6D4' },
   'TypeScript': { icon: SiTypescript, color: '#3178C6' },
   'HTML': { icon: FaHtml5, color: '#E34F26' },
+  'HTML5': { icon: FaHtml5, color: '#E34F26' },
   'CSS': { icon: FaCss3Alt, color: '#1572B6' },
+  'CSS3': { icon: FaCss3Alt, color: '#1572B6' },
   'JavaScript': { icon: FaJsSquare, color: '#F7DF1E' },
-  
+
   // Backend
   'Node.js': { icon: SiNodedotjs, color: '#339933' },
   'Java': { icon: FaJava, color: '#007396' },
   'Django': { icon: SiDjango, color: '#092E20' },
-  
+  'Fastify': { icon: SiFastify, color: '#000000' },
+  'FastAPI': { icon: SiFastapi, color: '#009688' },
+  'Python': { icon: SiPython, color: '#3776AB' },
+
   // Database
   'MongoDB': { icon: SiMongodb, color: '#47A248' },
   'PostgreSQL': { icon: SiPostgresql, color: '#4169E1' },
   'Postgres': { icon: SiPostgresql, color: '#4169E1' },
   'Firebase': { icon: SiFirebase, color: '#ff3e28ff' },
-  'MySQL': { icon: SiMysql , color: '#4479A1' },
-  
+  'MySQL': { icon: SiMysql, color: '#4479A1' },
+
+  // Cloud / AI / ML
+  'Google Cloud Run': { icon: SiGooglecloud, color: '#4285F4' },
+  'Gemini API': { icon: SiGooglegemini, color: '#8E75B2' },
+  'LightGBM': { icon: TrendingUp, color: '#00A99D' },
+  'PWA': { icon: SiPwa, color: '#5A0FC8' },
+
   // Tools
   'Docker': { icon: SiDocker, color: '#2496ED' },
   'Git': { icon: SiGit, color: '#F05032' },
@@ -59,6 +77,10 @@ export const techIcons: TechIconMap = {
   'Vite': { icon: SiVite, color: '#646CFF' },
 };
 
+// Quita sufijos entre paréntesis (ej. "PostgreSQL (Neon)" -> "PostgreSQL") para
+// resolver el icono base cuando el nombre completo no tiene entrada propia.
 export const getIconForTech = (techName: string) => {
-  return techIcons[techName] || null;
+  if (techIcons[techName]) return techIcons[techName];
+  const baseName = techName.replace(/\s*\(.*\)$/, '').trim();
+  return techIcons[baseName] || null;
 };

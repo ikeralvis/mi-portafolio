@@ -1,32 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted-foreground: #52525b;
+  --subtle-foreground: #71717a;
+  --faint-foreground: #a1a1aa;
+
+  --glass-bg: rgba(0, 0, 0, 0.035);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-strong-bg: rgba(0, 0, 0, 0.06);
+  --glass-strong-border: rgba(0, 0, 0, 0.14);
+
+  --accent-blob-1: rgba(59, 130, 246, 0.12);
+  --accent-blob-2: rgba(168, 85, 247, 0.1);
+
+  --gradient-text-from: #0a0a0a;
+  --gradient-text-to: #52525b;
+
+  --scrollbar-track: #f4f4f5;
+  --scrollbar-thumb: #a1a1aa;
+  --scrollbar-thumb-hover: #52525b;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted-foreground: #d1d5db;
+  --subtle-foreground: #9ca3af;
+  --faint-foreground: #6b7280;
+
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-strong-bg: rgba(255, 255, 255, 0.1);
+  --glass-strong-border: rgba(255, 255, 255, 0.2);
+
+  --accent-blob-1: rgba(59, 130, 246, 0.1);
+  --accent-blob-2: rgba(168, 85, 247, 0.1);
+
+  --gradient-text-from: #ffffff;
+  --gradient-text-to: #666666;
+
+  --scrollbar-track: #000000;
+  --scrollbar-thumb: #666666;
+  --scrollbar-thumb-hover: #ffffff;
+}
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light dark;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--background);
+  color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Glass effect utility classes */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-strong-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--glass-strong-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Custom scrollbar */
@@ -35,16 +86,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #666666;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Focus visible for accessibility */
@@ -55,7 +106,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #666666 100%);
+  background: linear-gradient(135deg, var(--gradient-text-from) 0%, var(--gradient-text-to) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -64,5 +115,5 @@ body {
 /* Selection */
 ::selection {
   background-color: #0070f3;
-  color: #000000;
+  color: #ffffff;
 }

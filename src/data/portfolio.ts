@@ -1,8 +1,6 @@
 export interface PortfolioData {
   personal: {
     name: string;
-    role: string;
-    bio: string;
     photo: string;
     cv: string;
   };
@@ -12,103 +10,87 @@ export interface PortfolioData {
     email: string;
   };
   stack: {
-    category: string;
+    id: string;
     technologies: string[];
   }[];
   experience: {
-    position: string;
+    id: string;
     company: string;
     companyLogo?: string;
-    period: string;
-    description: string | string[];
+    period?: string;
     type: 'work' | 'education';
+    roleIds?: string[];
   }[];
   projects: {
     id: string;
     name: string;
-    description: string;
     technologies: string[];
     repoUrl?: string;
     demoUrl?: string;
     image?: string;
     featured?: boolean;
+    highlight?: boolean;
   }[];
 }
 
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Iker Alvis Veloso",
-    role: "Frontend Developer",
-    bio: "Estudiante de Ingeniería Informática con experiencia práctica como desarrollador Front-end en Ayesa, especializado en la implementación de portales y aplicaciones con React.js y Liferay. Dominio de la metodología Scrum y de los fundamentos de programación con Java. Persona proactiva y orientada a resultados, enfocada en la calidad del código, el aprendizaje continuo y la colaboración en equipos multidisciplinares para entregar soluciones innovadoras y de valor.",
     photo: "/yo.JPG",
     cv: "/CV_Iker_Es.pdf"
   },
   social: {
     github: "https://github.com/ikeralvis",
-    linkedin: "https://linkedin.com/in/iker-veloso",
-    email: "mailto:iker.a@opendeusto.es"
+    linkedin: "https://linkedin.com/in/iker-alvis",
+    email: "mailto:ikeralvis14@gmail.com"
   },
   stack: [
     {
-      category: "Frontend",
-      technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript", "HTML", "CSS", "JavaScript"]
+      id: "frontend",
+      technologies: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Liferay"]
     },
     {
-      category: "Backend",
-      technologies: ["Node.js", "Java", "Django"]
+      id: "database",
+      technologies: ["MongoDB", "PostgreSQL", "MySQL"]
     },
     {
-      category: "Database",
-      technologies: ["MongoDB", "PostgreSQL", "Firebase", "MySQL"]
+      id: "methodologies",
+      technologies: ["Scrum"]
     },
     {
-      category: "Tools & Others",
-      technologies: ["Docker", "Git", "Figma", "Scrum", "IA Generativa", "Vite"]
+      id: "tools",
+      technologies: ["Docker", "Git", "Figma"]
     }
   ],
   experience: [
     {
-      position: "Desarrollador Front-End",
-      company: "Ayesa",
+      id: "ayesa",
+      company: "Ayesa Digital",
       companyLogo: "/logos/ayesa.png",
-      period: "Junio 2025 - Actualmente",
-      description: [
-        "Desarrollo e implementación de páginas y componentes en portales <strong>Liferay</strong>.",
-        "Creación de funcionalidades complejas y modulares usando <strong>Client Extensions</strong> basadas en <strong>React.js</strong> y <strong>JavaScript (ES6+)</strong>.",
-        "Responsable de la corrección de <strong>bugs</strong> y el mantenimiento evolutivo de las aplicaciones para asegurar un óptimo rendimiento.",
-        "Colaboración en equipos multidisciplinares aplicando la metodología ágil <strong>Scrum</strong>."
-      ],
-      type: "work"
+      type: "work",
+      roleIds: ["current", "intern"]
     },
     {
-      position: "Ingeniería Informática",
+      id: "deusto",
       company: "Universidad de Deusto",
       companyLogo: "/logos/deusto.png",
-      period: "Sep 2022 - Actualmente",
-      description: [
-        "Formación integral en desarrollo de software y gestión de proyectos tecnológicos en la Universidad de Deusto.",
-        "Conocimientos clave: Desarrollo Front-end (<strong>HTML, CSS, JavaScript, React</strong>), Back-end (<strong>Java, Python, C/C++</strong>), Bases de Datos (<strong>SQL, MySQL</strong>).",
-        "Especializado en metodologías ágiles (<strong>Scrum</strong>) y principios de <strong>Arquitectura de Software</strong> y POO.",
-        "Modelo educativo práctico con foco en la ética y la innovación tecnológica."
-      ],
       type: "education"
     }
   ],
   projects: [
     {
-      id: "quicklink",
-      name: "QuickLink - Acortador de URLs",
-      description: "Acortador de URLs moderno con autenticación, análisis de enlaces y gestión de URLs personalizadas. Utiliza la API de TinyURL para generar enlaces cortos.",
-      technologies: ["Next.js", "TypeScript", "Clerk Auth", "TinyURL API", "Tailwind CSS"],
-      repoUrl: "https://github.com/ikeralvis/url-shortener",
-      demoUrl: "https://quicklink-pearl.vercel.app/",
-      image: "/projects/quicklink.png",
-      featured: true
+      id: "tankgo",
+      name: "TankGo",
+      technologies: ["Next.js", "React", "TypeScript", "Fastify", "Python", "FastAPI", "PostgreSQL (Neon)", "Docker", "Google Cloud Run", "Gemini API", "LightGBM", "PWA"],
+      repoUrl: "https://github.com/ikeralvis/gasolineras_project",
+      demoUrl: "https://tankgo.dev",
+      image: "/projects/tankgo.png",
+      featured: true,
+      highlight: true
     },
     {
       id: "studiotools",
       name: "StudioTools",
-      description: "Gestor de herramientas web con categorías personalizables, tres modos de visualización y búsqueda en tiempo real. Incluye autenticación completa y almacenamiento en la nube.",
       technologies: ["React", "Vite", "Firebase", "Tailwind CSS", "Lucide React"],
       repoUrl: "https://github.com/ikeralvis/MisHerramientas",
       demoUrl: "https://studiotools.netlify.app/",
@@ -118,7 +100,6 @@ export const portfolioData: PortfolioData = {
     {
       id: "cityinsight",
       name: "CityInsight",
-      description: "🏆 1er Puesto OA6 University Deusto. Plataforma inteligente con IA generativa para mejorar la calidad de vida ciudadana, detectando problemas y ofreciendo soluciones rápidas a los gobiernos.",
       technologies: ["HTML", "CSS", "JavaScript", "IA Generativa"],
       repoUrl: "https://github.com/ikeralvis/CityInsight",
       demoUrl: "https://ikeralvis.github.io/CityInsight/",
@@ -128,7 +109,6 @@ export const portfolioData: PortfolioData = {
     {
       id: "pinfluence",
       name: "Pinfluence Clone",
-      description: "Clon de Pinterest con funcionalidad completa: visualización de fotos, descarga, favoritos, búsqueda avanzada y modo oscuro. Utiliza la API de Unsplash.",
       technologies: ["React", "React Router", "Unsplash API", "LocalStorage"],
       repoUrl: "https://github.com/ikeralvis/pinfluence-clone",
       demoUrl: "https://pinfluence-clone.vercel.app/",
@@ -137,7 +117,6 @@ export const portfolioData: PortfolioData = {
     {
       id: "gasolineras",
       name: "Gasolineras España",
-      description: "Consulta precios de gasolineras en España en tiempo real. Incluye ordenamiento por precio, búsqueda de estaciones y múltiples filtros para refinar resultados.",
       technologies: ["React", "Vite", "Tailwind CSS", "API Gobierno España"],
       repoUrl: "https://github.com/ikeralvis/gasolineras-app",
       demoUrl: "https://gasolineras-app-beta.vercel.app/",
@@ -146,7 +125,6 @@ export const portfolioData: PortfolioData = {
     {
       id: "galeria-arte",
       name: "Galería de Arte",
-      description: "Plataforma web para explorar colecciones de arte, cuadros y artistas. Incluye sistema de gestión completo con Django y diseño responsive.",
       technologies: ["Django", "HTML5", "CSS3", "Python"],
       repoUrl: "https://github.com/ikeralvis/GaleriaArte-IW",
       image: "/projects/galeria.png"
@@ -154,30 +132,10 @@ export const portfolioData: PortfolioData = {
     {
       id: "skin-care-routine",
       name: "Skin Care Routine",
-      description: "Aplicación web para gestionar y seguir rutinas de cuidado de la piel. Permite a los usuarios registrar productos, realizar un seguimiento de su uso y obtener recomendaciones personalizadas.",
       technologies: ["React", "Vite", "Tailwind CSS", "Firebase Auth", "Firebase Firestore"],
       repoUrl: "https://github.com/ikeralvis/skincare-app",
       demoUrl: "https://mikelskinrutine.netlify.app/",
       image: "/projects/skin-care-routine.png"
-    },
-    {
-      id: "mitiempo-app",
-      name: "Mi Tiempo",
-      description: "Aplicación web para consultar el clima en tiempo real. Permite a los usuarios buscar ciudades y ver la previsión del tiempo.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "OpenWeather API"],
-      repoUrl: "https://github.com/ikeralvis/mitiempo-app",
-      demoUrl: "https://mitiempo-app.vercel.app/",
-      image: "/projects/mi-tiempo.png"
-    }, 
-    {
-      id: "countrip",
-      name: "Countrip",
-      description: "Aplicacion que permite registrar los viajes que has hecho.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-      repoUrl: "https://github.com/ikeralvis/countrip",
-      demoUrl: "https://countrip.vercel.app/",
-      image: "/projects/countrip.png"
     }
-    
   ]
 };

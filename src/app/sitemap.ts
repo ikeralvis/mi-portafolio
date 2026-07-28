@@ -1,14 +1,19 @@
-// Crear src/app/sitemap.ts
 import { MetadataRoute } from 'next';
+import { routing } from '@/i18n/routing';
+
+const SITE_URL = 'https://ikeralvis-dev.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://ikeralvis-dev.vercel.app',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    // Agregar rutas de proyectos si se crean páginas individuales
-  ];
+  const languages: Record<string, string> = {
+    es: SITE_URL,
+    en: `${SITE_URL}/en`,
+  };
+
+  return routing.locales.map((locale) => ({
+    url: locale === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${locale}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: locale === routing.defaultLocale ? 1 : 0.9,
+    alternates: { languages },
+  }));
 }

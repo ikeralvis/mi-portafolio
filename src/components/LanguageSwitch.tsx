@@ -1,16 +1,21 @@
 'use client';
 
-import { useLocale } from '@/contexts/LocaleContext';
+import { useLocale } from 'next-intl';
 import { Languages } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { usePathname, useRouter } from '@/i18n/navigation';
 
 export default function LanguageSwitch() {
-  const { locale, setLocale } = useLocale();
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const nextLocale = locale === 'es' ? 'en' : 'es';
 
   return (
     <motion.button
-      onClick={() => setLocale(locale === 'es' ? 'en' : 'es')}
-      className="glass fixed top-6 right-6 z-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all hover:glass-strong"
+      onClick={() => router.replace(pathname, { locale: nextLocale })}
+      className="glass flex h-10 items-center gap-2 rounded-full px-4 text-sm font-medium transition-all hover:glass-strong"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label="Change language"

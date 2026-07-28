@@ -1,4 +1,14 @@
 {
+    "metadata": {
+        "title": "Iker Alvis Veloso | Liferay Frontend Developer",
+        "description": "Computer Engineering graduate (University of Deusto) and Liferay Frontend Developer at Ayesa Digital. Portfolio featuring real projects built with React, Next.js, TypeScript and Liferay.",
+        "ogDescription": "Iker Alvis Veloso's professional portfolio. Computer Engineering graduate and Liferay Frontend Developer, experienced in React, Next.js, TypeScript and Liferay (Ayesa Digital).",
+        "twitterDescription": "Portfolio: React, Next.js, TypeScript and Liferay. Computer Engineering graduate from the University of Deusto."
+    },
+    "personal": {
+        "role": "Liferay Frontend Developer",
+        "bio": "Computer Engineering graduate from the University of Deusto, currently working as a Liferay Frontend Developer at Ayesa Digital, building corporate portals with React and TypeScript. Specialized in designing intuitive interfaces that meet client requirements. Proactive and results-driven, focused on code quality, continuous learning, and collaboration within multidisciplinary teams to deliver innovative, value-driven solutions."
+    },
     "nav": {
         "home": "Home",
         "about": "About",
@@ -13,21 +23,95 @@
     },
     "about": {
         "title": "Tech Stack",
-        "description": "Technologies and tools I work with"
+        "description": "Technologies and tools I work with",
+        "stackLabels": {
+            "frontend": "Frontend",
+            "database": "Database",
+            "methodologies": "Methodologies",
+            "tools": "Tools & Others"
+        }
     },
     "experience": {
         "title": "Experience",
         "work": "Work Experience",
         "education": "Education",
-        "present": "Present"
+        "present": "Present",
+        "ayesa": {
+            "position": "Liferay Frontend Developer",
+            "company": "Ayesa Digital",
+            "roles": {
+                "current": {
+                    "position": "Liferay Frontend Developer",
+                    "period": "Jul 2026 - Present",
+                    "bullets": [
+                        "Full-time role developing <strong>corporate portals</strong> with <strong>Liferay</strong>, <strong>React</strong> and <strong>TypeScript</strong>.",
+                        "Design and implementation of intuitive, accessible interfaces that meet client-defined criteria and requirements.",
+                        "Development of <strong>Client Extensions</strong> and reusable modular components to speed up feature delivery.",
+                        "Close collaboration with design, backend and product teams applying <strong>Scrum</strong> to maximize quality and delivered value."
+                    ]
+                },
+                "intern": {
+                    "position": "Internship - Front-End Developer",
+                    "period": "Jun 2025 - Jun 2026",
+                    "bullets": [
+                        "Development and implementation of pages and components on <strong>Liferay</strong> portals.",
+                        "Creation of complex, modular features using <strong>Client Extensions</strong> built with <strong>React.js</strong> and <strong>JavaScript (ES6+)</strong>.",
+                        "Responsible for <strong>bug</strong> fixing and evolutionary maintenance of applications to ensure optimal performance.",
+                        "Collaboration in multidisciplinary teams applying the agile <strong>Scrum</strong> methodology."
+                    ]
+                }
+            }
+        },
+        "deusto": {
+            "position": "Computer Engineering Graduate",
+            "company": "University of Deusto",
+            "period": "Sep 2022 - Jun 2026",
+            "bullets": [
+                "Final GPA: <strong>8.25 / 10</strong>, with a Bachelor's Thesis graded <strong>9.9 / 10</strong>.",
+                "<strong>Highest Honors</strong> in Statistics, Databases I, Software Project Management, Software Process and Quality, Cloud Systems Architecture, and Advanced Web Data Application Development.",
+                "Project management: agile methodologies (<strong>Scrum</strong>), business models with <strong>Lean Canvas</strong>, and business case development.",
+                "Software quality: quality assurance processes and methodologies, verification and continuous improvement.",
+                "Databases: relational design and modeling (<strong>SQL, MySQL, PostgreSQL</strong>) and NoSQL (<strong>MongoDB</strong>).",
+                "Web development: Front-end (<strong>HTML, CSS, JavaScript, React</strong>) and Back-end (<strong>Java, Python, C/C++</strong>).",
+                "Cloud architectures and infrastructure: containerization with <strong>Docker</strong> and cloud systems architecture design.",
+                "Information security: cybersecurity fundamentals and data protection best practices."
+            ]
+        }
     },
     "projects": {
         "title": "Projects",
         "description": "Featured applications and projects I've developed",
         "viewRepo": "View repository",
         "viewDemo": "View demo",
+        "viewCode": "Code",
+        "viewDemoShort": "Demo",
         "featured": "Featured",
-        "all": "All"
+        "all": "All",
+        "thesisProject": "Bachelor's Thesis",
+        "noResults": "No projects with this technology",
+        "items": {
+            "tankgo": {
+                "description": "Cloud-native platform to compare real-time fuel prices, featuring an optimal-stop recommendation system for road trips, a voice agent, and 7-day price forecasting. Monorepo architecture deployed on Google Cloud."
+            },
+            "studiotools": {
+                "description": "Web tool manager with customizable categories, three view modes and real-time search. Includes full authentication and cloud storage."
+            },
+            "cityinsight": {
+                "description": "🏆 1st Place, OA6 University of Deusto. Smart platform powered by generative AI to improve citizens' quality of life, detecting issues and offering quick solutions for local governments."
+            },
+            "pinfluence": {
+                "description": "Full-featured Pinterest clone: photo browsing, downloads, favorites, advanced search and dark mode. Powered by the Unsplash API."
+            },
+            "gasolineras": {
+                "description": "Check real-time fuel station prices across Spain. Includes sorting by price, station search and multiple filters to refine results."
+            },
+            "galeria-arte": {
+                "description": "Web platform to explore art collections, paintings and artists. Includes a full management system built with Django and responsive design."
+            },
+            "skin-care-routine": {
+                "description": "Web app to manage and track skincare routines. Lets users log products, track usage and get personalized recommendations."
+            }
+        }
     },
     "contact": {
         "title": "Contact",

@@ -1,53 +1,51 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from '@/hooks/useTranslations';
+import { useLocale, useTranslations } from 'next-intl';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-import { useLocale } from '@/contexts/LocaleContext';
+import { fadeInUp, fadeInItem, staggerContainer } from '@/lib/motion';
 
 export default function Contact() {
   const t = useTranslations('contact');
   const tFooter = useTranslations('footer');
-  const { locale } = useLocale();
+  const locale = useLocale();
 
   const socialLinks = [
     {
       name: t('email'),
       icon: Mail,
       href: portfolioData.social.email,
-      color: 'hover:text-blue-400'
+      color: 'hover:text-blue-500 dark:hover:text-blue-400',
     },
     {
       name: t('github'),
       icon: Github,
       href: portfolioData.social.github,
-      color: 'hover:text-purple-400'
+      color: 'hover:text-purple-500 dark:hover:text-purple-400',
     },
     {
       name: t('linkedin'),
       icon: Linkedin,
       href: portfolioData.social.linkedin,
-      color: 'hover:text-blue-500'
-    }
+      color: 'hover:text-blue-600 dark:hover:text-blue-500',
+    },
   ];
 
   return (
     <section id="contact" className="relative px-4 py-32">
       <div className="mx-auto w-full max-w-4xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          variants={fadeInUp}
           className="glass-strong rounded-3xl p-8 text-center md:p-12"
         >
-          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mb-4 text-4xl font-bold text-zinc-900 dark:text-white md:text-5xl">
             {t('title')}
           </h2>
-          <p className="mb-12 text-lg text-gray-300">
-            {t('description')}
-          </p>
+          <p className="mb-12 text-lg text-zinc-600 dark:text-gray-300">{t('description')}</p>
 
           {/* CV Download Button */}
           <motion.a
@@ -55,32 +53,35 @@ export default function Contact() {
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="glass-strong mb-12 inline-flex items-center gap-3 rounded-full px-8 py-4 font-medium transition-all hover:bg-white/10"
+            className="glass-strong mb-12 inline-flex items-center gap-3 rounded-full px-8 py-4 font-medium text-zinc-900 transition-all hover:bg-black/5 dark:text-white dark:hover:bg-white/10"
           >
             <Download className="h-5 w-5" />
             {t('downloadCV')}
           </motion.a>
 
           {/* Social Links */}
-          <div className="grid gap-4 md:grid-cols-3">
-            {socialLinks.map((link, idx) => (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer(0.1)}
+            className="grid gap-4 md:grid-cols-3"
+          >
+            {socialLinks.map((link) => (
               <motion.a
                 key={link.name}
                 href={link.href}
                 target={link.href.startsWith('mailto:') ? undefined : '_blank'}
                 rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                variants={fadeInItem}
                 whileHover={{ scale: 1.05 }}
-                className={`glass flex items-center gap-3 rounded-xl p-4 transition-all hover:glass-strong ${link.color}`}
+                className={`glass flex items-center gap-3 rounded-xl p-4 text-zinc-700 transition-all hover:glass-strong dark:text-gray-300 ${link.color}`}
               >
                 <link.icon className="h-6 w-6" />
                 <span className="font-medium">{link.name}</span>
               </motion.a>
             ))}
-          </div>
+          </motion.div>
 
           {/* Footer */}
           <motion.div
@@ -88,9 +89,11 @@ export default function Contact() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="mt-12 border-t border-white/10 pt-8 text-sm text-gray-500"
+            className="mt-12 border-t border-black/10 pt-8 text-sm text-zinc-500 dark:border-white/10 dark:text-gray-500"
           >
-            <p>© 2025 {portfolioData.personal.name}. {tFooter('rights')}.</p>
+            <p>
+              © 2025 {portfolioData.personal.name}. {tFooter('rights')}.
+            </p>
             <p className="mt-2">
               {tFooter('madeWith')} ❤️ {tFooter('by')} Iker Alvis
             </p>

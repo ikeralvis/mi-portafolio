@@ -1,4 +1,14 @@
 {
+    "metadata": {
+        "title": "Iker Alvis Veloso | Liferay Frontend Developer",
+        "description": "Graduado en Ingeniería Informática (Universidad de Deusto) y Liferay Frontend Developer en Ayesa Digital. Portfolio con proyectos reales en React, Next.js, TypeScript y Liferay.",
+        "ogDescription": "Portfolio profesional de Iker Alvis Veloso. Graduado en Ingeniería Informática y Liferay Frontend Developer, con experiencia en React, Next.js, TypeScript y Liferay (Ayesa Digital).",
+        "twitterDescription": "Portfolio: React, Next.js, TypeScript y Liferay. Graduado en Ingeniería Informática por la Universidad de Deusto."
+    },
+    "personal": {
+        "role": "Liferay Frontend Developer",
+        "bio": "Graduado en Ingeniería Informática por la Universidad de Deusto y actualmente Liferay Frontend Developer en Ayesa Digital, desarrollando portales corporativos con React y TypeScript. Especializado en el diseño de interfaces intuitivas que cumplen los criterios y requisitos de cliente. Persona proactiva y orientada a resultados, enfocada en la calidad del código, el aprendizaje continuo y la colaboración en equipos multidisciplinares para entregar soluciones innovadoras y de valor."
+    },
     "nav": {
         "home": "Inicio",
         "about": "Sobre mí",
@@ -13,21 +23,95 @@
     },
     "about": {
         "title": "Stack Tecnológico",
-        "description": "Tecnologías y herramientas con las que trabajo"
+        "description": "Tecnologías y herramientas con las que trabajo",
+        "stackLabels": {
+            "frontend": "Frontend",
+            "database": "Base de Datos",
+            "methodologies": "Metodologías",
+            "tools": "Herramientas y Otros"
+        }
     },
     "experience": {
         "title": "Experiencia",
         "work": "Experiencia Laboral",
         "education": "Educación",
-        "present": "Presente"
+        "present": "Actualmente",
+        "ayesa": {
+            "position": "Liferay Frontend Developer",
+            "company": "Ayesa Digital",
+            "roles": {
+                "current": {
+                    "position": "Liferay Frontend Developer",
+                    "period": "Jul 2026 - Actualmente",
+                    "bullets": [
+                        "Contrato a jornada completa desarrollando <strong>portales corporativos</strong> con <strong>Liferay</strong>, <strong>React</strong> y <strong>TypeScript</strong>.",
+                        "Diseño e implementación de interfaces intuitivas y accesibles, cumpliendo los criterios y requisitos definidos por cliente.",
+                        "Desarrollo de <strong>Client Extensions</strong> y componentes modulares reutilizables para acelerar la entrega de nuevas funcionalidades.",
+                        "Colaboración estrecha con equipos de diseño, backend y producto aplicando <strong>Scrum</strong> para maximizar la calidad y el valor entregado."
+                    ]
+                },
+                "intern": {
+                    "position": "Prácticas - Desarrollador Front-End",
+                    "period": "Jun 2025 - Jun 2026",
+                    "bullets": [
+                        "Desarrollo e implementación de páginas y componentes en portales <strong>Liferay</strong>.",
+                        "Creación de funcionalidades complejas y modulares usando <strong>Client Extensions</strong> basadas en <strong>React.js</strong> y <strong>JavaScript (ES6+)</strong>.",
+                        "Responsable de la corrección de <strong>bugs</strong> y el mantenimiento evolutivo de las aplicaciones para asegurar un óptimo rendimiento.",
+                        "Colaboración en equipos multidisciplinares aplicando la metodología ágil <strong>Scrum</strong>."
+                    ]
+                }
+            }
+        },
+        "deusto": {
+            "position": "Graduado en Ingeniería Informática",
+            "company": "Universidad de Deusto",
+            "period": "Sep 2022 - Jun 2026",
+            "bullets": [
+                "Nota media final: <strong>8.25 / 10</strong>, con Proyecto de Fin de Grado calificado con <strong>9.9 / 10</strong>.",
+                "<strong>Matrícula de Honor</strong> en Estadística, Bases de Datos I, Gestión de Proyectos Software, Proceso de Software y Calidad, Arquitecturas de Sistemas en la Nube y Desarrollo Avanzado de Aplicaciones para la Web de Datos.",
+                "Gestión de proyectos: metodologías ágiles (<strong>Scrum</strong>), modelos de negocio con <strong>Lean Canvas</strong> y elaboración de business cases.",
+                "Calidad de software: procesos y metodologías de aseguramiento de la calidad, verificación y mejora continua.",
+                "Bases de datos: diseño y modelado relacional (<strong>SQL, MySQL, PostgreSQL</strong>) y NoSQL (<strong>MongoDB</strong>).",
+                "Desarrollo web: Front-end (<strong>HTML, CSS, JavaScript, React</strong>) y Back-end (<strong>Java, Python, C/C++</strong>).",
+                "Arquitecturas cloud e infraestructuras: contenerización con <strong>Docker</strong> y diseño de arquitecturas de sistemas en la nube.",
+                "Seguridad de la información: fundamentos de ciberseguridad y buenas prácticas de protección de datos."
+            ]
+        }
     },
     "projects": {
         "title": "Proyectos",
         "description": "Aplicaciones y proyectos destacados que he desarrollado",
         "viewRepo": "Ver repositorio",
         "viewDemo": "Ver demo",
+        "viewCode": "Código",
+        "viewDemoShort": "Demo",
         "featured": "Destacado",
-        "all": "Todos"
+        "all": "Todos",
+        "thesisProject": "Proyecto de Fin de Grado",
+        "noResults": "No hay proyectos con esta tecnología",
+        "items": {
+            "tankgo": {
+                "description": "Plataforma cloud-native para comparar precios de carburante en tiempo real, con un sistema de recomendación de parada óptima en ruta, agente de voz y predicción de precios a 7 días vista. Arquitectura de monorepo desplegada en Google Cloud."
+            },
+            "studiotools": {
+                "description": "Gestor de herramientas web con categorías personalizables, tres modos de visualización y búsqueda en tiempo real. Incluye autenticación completa y almacenamiento en la nube."
+            },
+            "cityinsight": {
+                "description": "🏆 1er Puesto OA6 University Deusto. Plataforma inteligente con IA generativa para mejorar la calidad de vida ciudadana, detectando problemas y ofreciendo soluciones rápidas a los gobiernos."
+            },
+            "pinfluence": {
+                "description": "Clon de Pinterest con funcionalidad completa: visualización de fotos, descarga, favoritos, búsqueda avanzada y modo oscuro. Utiliza la API de Unsplash."
+            },
+            "gasolineras": {
+                "description": "Consulta precios de gasolineras en España en tiempo real. Incluye ordenamiento por precio, búsqueda de estaciones y múltiples filtros para refinar resultados."
+            },
+            "galeria-arte": {
+                "description": "Plataforma web para explorar colecciones de arte, cuadros y artistas. Incluye sistema de gestión completo con Django y diseño responsive."
+            },
+            "skin-care-routine": {
+                "description": "Aplicación web para gestionar y seguir rutinas de cuidado de la piel. Permite a los usuarios registrar productos, realizar un seguimiento de su uso y obtener recomendaciones personalizadas."
+            }
+        }
     },
     "contact": {
         "title": "Contacto",

@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Iker Alvis Portfolio',
     short_name: 'Iker Alvis',
-    description: 'Portfolio profesional de Iker Alvis Veloso',
+    description: 'Portfolio profesional de Iker Alvis Veloso, Liferay Frontend Developer',
     start_url: '/',
     display: 'standalone',
     background_color: '#000000',
