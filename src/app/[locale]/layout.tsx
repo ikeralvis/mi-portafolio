@@ -66,6 +66,7 @@ export async function generateMetadata({
       "Desarrollo web moderno"
     ],
     authors: [{ name: "Iker Alvis Veloso", url: "https://github.com/ikeralvis" }],
+    applicationName: "Iker Alvis",
     creator: "Iker Alvis Veloso",
     publisher: "Iker Alvis Veloso",
     robots: {
@@ -86,7 +87,7 @@ export async function generateMetadata({
       url: canonical,
       title: t('title'),
       description: t('ogDescription'),
-      siteName: "Iker Alvis Portfolio",
+      siteName: "Iker Alvis",
       images: [
         {
           url: "/og-image.png",

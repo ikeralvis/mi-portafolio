@@ -1,0 +1,21 @@
+# Iker Alvis Veloso
+
+> Liferay Frontend Developer en Ayesa Digital (Bilbao, España). Graduado en Ingeniería Informática por la Universidad de Deusto. Desarrolla portales corporativos con React, TypeScript y Liferay, y proyectos propios con Next.js.
+
+Portfolio personal, disponible en español e inglés.
+
+## Páginas
+
+- [Portfolio (ES)](https://ikeralvis-dev.vercel.app): Sobre mí, experiencia, proyectos y contacto.
+- [Portfolio (EN)](https://ikeralvis-dev.vercel.app/en): Same content in English.
+- [CV (ES)](https://ikeralvis-dev.vercel.app/CV_Iker_Es.pdf)
+- [CV (EN)](https://ikeralvis-dev.vercel.app/CV_Iker_En.pdf)
+
+## Perfiles
+
+- [GitHub](https://github.com/ikeralvis)
+- [LinkedIn](https://linkedin.com/in/iker-alvis)
+
+## Stack
+
+React, Next.js, TypeScript, JavaScript, Tailwind CSS, Liferay, MongoDB, PostgreSQL, MySQL, Scrum.

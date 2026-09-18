@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 
 function monogram(size) {
-  const fontSize = Math.round(size * 0.42);
+  const fontSize = Math.round(size * 0.5);
   return new ImageResponse(
     {
       type: 'div',
@@ -19,7 +19,7 @@ function monogram(size) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #6366f1 0%, #7c3aed 50%, #4c1d95 100%)',
+          background: '#0a0a0a',
         },
         children: {
           type: 'div',
@@ -53,13 +53,16 @@ async function main() {
 
   await savePng(192, path.join(root, 'public', 'icon-192.png'));
   await savePng(512, path.join(root, 'public', 'icon-512.png'));
-  const appleBuf = await savePng(180, path.join(root, 'public', 'apple-icon.png'));
+  await savePng(512, path.join(root, 'src', 'app', 'icon.png'));
+  const appleBuf = await savePng(180, path.join(root, 'src', 'app', 'apple-icon.png'));
 
   const icon32 = await savePng(32, path.join(root, 'public', '__icon32.png'));
   const icon16 = await savePng(16, path.join(root, 'public', '__icon16.png'));
+  await savePng(48, path.join(root, 'public', '__icon48.png'));
   const icoBuf = await pngToIco([
     path.join(root, 'public', '__icon16.png'),
     path.join(root, 'public', '__icon32.png'),
+    path.join(root, 'public', '__icon48.png'),
   ]);
   await writeFile(path.join(root, 'src', 'app', 'favicon.ico'), icoBuf);
   console.log('wrote favicon.ico', icoBuf.length, 'bytes');
@@ -67,6 +70,7 @@ async function main() {
   await import('node:fs/promises').then(fs => Promise.all([
     fs.rm(path.join(root, 'public', '__icon32.png')),
     fs.rm(path.join(root, 'public', '__icon16.png')),
+    fs.rm(path.join(root, 'public', '__icon48.png')),
   ]));
 
   void appleBuf; void icon32; void icon16;

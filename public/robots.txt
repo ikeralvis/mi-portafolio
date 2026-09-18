@@ -2,8 +2,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://ikeralvis-dev.vercel.app/sitemap.xml
+# Crawlers de IA: permitidos (el portfolio es público y quiero que me encuentren)
+# Resumen legible para LLMs en /llms.txt
 
-# Disallow sensitive paths (none for now)
-# Disallow: /admin/
+Sitemap: https://ikeralvis-dev.vercel.app/sitemap.xml
