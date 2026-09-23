@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { portfolioData } from '@/data/portfolio';
 import { getIconForTech } from '@/lib/techIcons';
-import { fadeInUp, fadeInItem, staggerContainer } from '@/lib/motion';
+import { easeVercel, fadeInUp, fadeInItem, staggerContainer, viewportOnce } from '@/lib/motion';
+import { handleSpotlightMove } from '@/lib/spotlight';
 
 export default function About() {
   const t = useTranslations('about');
@@ -15,7 +16,7 @@ export default function About() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={viewportOnce}
           variants={fadeInUp}
           className="mb-16 text-center"
         >
@@ -30,7 +31,7 @@ export default function About() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={viewportOnce}
           variants={staggerContainer(0.1)}
           className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
         >
@@ -38,7 +39,9 @@ export default function About() {
             <motion.div
               key={category.id}
               variants={fadeInUp}
-              className="glass rounded-2xl p-6 transition-all hover:glass-strong"
+              onMouseMove={handleSpotlightMove}
+              whileHover={{ y: -2, scale: 1.015, transition: { duration: 0.45, ease: easeVercel } }}
+              className="spotlight-card glass rounded-2xl p-6 hover:glass-strong"
             >
               <h3 className="mb-4 text-xl font-semibold text-zinc-900 dark:text-white">
                 {t(`stackLabels.${category.id}`)}
@@ -47,7 +50,7 @@ export default function About() {
                 variants={staggerContainer(0.06)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={viewportOnce}
                 className="space-y-2"
               >
                 {category.technologies.map((tech) => {

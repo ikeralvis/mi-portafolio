@@ -7,7 +7,8 @@ import { portfolioData } from '@/data/portfolio';
 import { useState } from 'react';
 import { getIconForTech } from '@/lib/techIcons';
 import Image from 'next/image';
-import { fadeInUp, fadeInItem, staggerContainer } from '@/lib/motion';
+import { easeVercel, fadeInUp, fadeInItem, staggerContainer, viewportOnce } from '@/lib/motion';
+import { handleSpotlightMove } from '@/lib/spotlight';
 
 export default function Projects() {
   const t = useTranslations('projects');
@@ -25,7 +26,7 @@ export default function Projects() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={viewportOnce}
           variants={fadeInUp}
           className="mb-12 text-center"
         >
@@ -40,9 +41,10 @@ export default function Projects() {
           <motion.article
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={viewportOnce}
             variants={fadeInUp}
-            className="glass-strong relative mb-12 grid overflow-hidden rounded-3xl border border-blue-500/20 md:grid-cols-2"
+            onMouseMove={handleSpotlightMove}
+            className="spotlight-card glass-strong relative mb-12 grid overflow-hidden rounded-3xl border border-blue-500/20 md:grid-cols-2"
           >
             <div className="absolute left-6 top-6 z-10 flex items-center gap-1.5 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-xs font-medium text-blue-200 backdrop-blur-md">
               <Star className="h-3 w-3 fill-blue-200" />
@@ -123,7 +125,7 @@ export default function Projects() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={viewportOnce}
           variants={staggerContainer(0.05)}
           className="mb-12 flex flex-wrap justify-center gap-3"
         >
@@ -168,7 +170,7 @@ export default function Projects() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={viewportOnce}
           variants={staggerContainer(0.08)}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
@@ -177,7 +179,9 @@ export default function Projects() {
               key={project.id}
               variants={fadeInItem}
               layout
-              className="glass group relative flex flex-col overflow-hidden rounded-2xl transition-all hover:glass-strong"
+              onMouseMove={handleSpotlightMove}
+              whileHover={{ y: -3, scale: 1.015, transition: { duration: 0.45, ease: easeVercel } }}
+              className="spotlight-card glass group relative flex flex-col overflow-hidden rounded-2xl hover:glass-strong"
             >
               {/* Badge de destacado */}
               {project.featured && (

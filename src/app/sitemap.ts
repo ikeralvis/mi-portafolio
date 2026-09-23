@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-
-const SITE_URL = 'https://ikeralvis-dev.vercel.app';
+import { SITE_URL } from '@/lib/seo';
 
 // Actualiza esta fecha cuando cambie el contenido real de la página.
 const LAST_UPDATED = new Date('2026-09-18');

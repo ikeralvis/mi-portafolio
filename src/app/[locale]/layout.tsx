@@ -11,6 +11,7 @@ import { MotionConfig } from 'framer-motion';
 import { routing, type Locale } from '@/i18n/routing';
 import NavControls from '@/components/NavControls';
 import JsonLd from '@/components/JsonLd';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,8 +19,6 @@ const inter = Inter({
   display: 'swap',
   preload: true,
 });
-
-const SITE_URL = 'https://ikeralvis-dev.vercel.app';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -87,7 +86,7 @@ export async function generateMetadata({
       url: canonical,
       title: t('title'),
       description: t('ogDescription'),
-      siteName: "Iker Alvis",
+      siteName: SITE_NAME,
       images: [
         {
           url: "/og-image.png",

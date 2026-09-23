@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-import { easeVercel } from '@/lib/motion';
+import { easeVercel, springHover, springTap } from '@/lib/motion';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -90,18 +90,22 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <motion.div {...rise(0.6)} className="flex flex-wrap gap-4">
-              <button
+              <motion.button
                 onClick={scrollToProjects}
-                className="glass-strong rounded-full px-8 py-3 font-medium text-zinc-900 transition-all hover:scale-105 dark:text-white"
+                whileHover={shouldReduceMotion ? undefined : { scale: 1.02, transition: springHover }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.97, transition: springTap }}
+                className="shine-cta glass-strong rounded-full px-8 py-3 font-medium text-zinc-900 dark:text-white"
               >
                 {t('cta')}
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 onClick={scrollToContact}
-                className="rounded-full border border-black/15 px-8 py-3 font-medium text-zinc-900 transition-all hover:bg-black/5 dark:border-white/20 dark:text-white dark:hover:bg-white/5"
+                whileHover={shouldReduceMotion ? undefined : { scale: 1.02, transition: springHover }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.97, transition: springTap }}
+                className="rounded-full border border-black/15 px-8 py-3 font-medium text-zinc-900 transition-colors hover:bg-black/5 dark:border-white/20 dark:text-white dark:hover:bg-white/5"
               >
                 {t('contact')}
-              </button>
+              </motion.button>
             </motion.div>
           </motion.div>
 

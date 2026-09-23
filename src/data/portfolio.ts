@@ -126,8 +126,10 @@ export const portfolioData: PortfolioData = {
       id: "galeria-arte",
       name: "Galería de Arte",
       technologies: ["Django", "HTML5", "CSS3", "Python"],
-      repoUrl: "https://github.com/ikeralvis/GaleriaArte-IW",
-      image: "/projects/galeria.png"
+      repoUrl: "https://github.com/ikeralvis/GaleriaArte-IW"
+      // Pendiente: añadir public/projects/galeria.png (ver README de la carpeta)
+      // y restaurar `image: "/projects/galeria.png"`. Sin el archivo, next/image
+      // devolvía 400; se usa el fallback de emoji mientras tanto.
     },
     {
       id: "skin-care-routine",

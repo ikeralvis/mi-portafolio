@@ -119,7 +119,8 @@
         "downloadCV": "Descargar CV",
         "email": "Email",
         "github": "GitHub",
-        "linkedin": "LinkedIn"
+        "linkedin": "LinkedIn",
+        "copied": "¡Copiado!"
     },
     "footer": {
         "rights": "Todos los derechos reservados",

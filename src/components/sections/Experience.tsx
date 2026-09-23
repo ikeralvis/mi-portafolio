@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl';
 import { Briefcase, GraduationCap } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import Image from 'next/image';
-import { fadeInUp } from '@/lib/motion';
+import { easeVercel, fadeInUp, fadeInUpDelayed, viewportOnce } from '@/lib/motion';
+import { handleSpotlightMove } from '@/lib/spotlight';
 
 const richStrong = { strong: (chunks: React.ReactNode) => <strong>{chunks}</strong> };
 
@@ -27,11 +28,14 @@ export default function Experience() {
 
     return (
       <motion.div
-        initial={{ opacity: 0, x: -16 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1 }}
-        className="glass relative rounded-2xl p-6 transition-all hover:glass-strong"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={fadeInUpDelayed}
+        custom={index}
+        onMouseMove={handleSpotlightMove}
+        whileHover={{ y: -2, scale: 1.01, transition: { duration: 0.4, ease: easeVercel } }}
+        className="spotlight-card glass relative rounded-2xl p-6 hover:glass-strong"
       >
         <div className="mb-4 flex items-start gap-4">
           {/* Logo de la empresa/universidad */}
@@ -82,7 +86,7 @@ export default function Experience() {
             {experience.roleIds.map((roleId, i) => (
               <div key={roleId} className="relative">
                 <span
-                  className={`absolute -left-[29px] top-1 h-3 w-3 rounded-full ring-4 ring-white dark:ring-black ${
+                  className={`absolute -left-[31px] top-1 h-3 w-3 rounded-full ring-4 ring-white dark:ring-black ${
                     i === 0 ? 'bg-blue-500 dark:bg-blue-400' : 'bg-black/20 dark:bg-white/30'
                   }`}
                 />
@@ -119,7 +123,7 @@ export default function Experience() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={viewportOnce}
           variants={fadeInUp}
           className="mb-16 text-center"
         >

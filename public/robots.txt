@@ -1,8 +1,0 @@
-# robots.txt para ikeralvis-dev.vercel.app
-User-agent: *
-Allow: /
-
-# Crawlers de IA: permitidos (el portfolio es público y quiero que me encuentren)
-# Resumen legible para LLMs en /llms.txt
-
-Sitemap: https://ikeralvis-dev.vercel.app/sitemap.xml
