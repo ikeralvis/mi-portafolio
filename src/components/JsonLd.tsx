@@ -35,12 +35,15 @@ export default async function JsonLd({ locale }: Readonly<{ locale: Locale }>) {
       url: "https://www.ayesa.com",
       sameAs: "https://es.linkedin.com/company/ayesa/"
     },
+    knowsLanguage: ["es", "en", "eu"],
+    alumniOf: { "@type": "EducationalOrganization", name: "Universidad de Deusto", url: "https://www.deusto.es" },
     knowsAbout: [
       "React",
       "Next.js",
       "TypeScript",
       "JavaScript",
       "Liferay",
+      "Supabase",
       "Tailwind CSS",
       "Frontend Development",
       "Web Development"
@@ -55,6 +58,7 @@ export default async function JsonLd({ locale }: Readonly<{ locale: Locale }>) {
     name: SITE_NAME,
     alternateName: ["Iker Alvis", "Iker Alvis Portfolio"],
     inLanguage: locale,
+    description: t('bio'),
     author: { "@id": `${SITE_URL}/#person` }
   };
 

@@ -1,20 +1,25 @@
 {
     "metadata": {
         "title": "Iker Alvis Veloso | Liferay Frontend Developer",
-        "description": "Computer Engineering graduate (University of Deusto) and Liferay Frontend Developer at Ayesa Digital. Portfolio featuring real projects built with React, Next.js, TypeScript and Liferay.",
-        "ogDescription": "Iker Alvis Veloso's professional portfolio. Computer Engineering graduate and Liferay Frontend Developer, experienced in React, Next.js, TypeScript and Liferay (Ayesa Digital).",
-        "twitterDescription": "Portfolio: React, Next.js, TypeScript and Liferay. Computer Engineering graduate from the University of Deusto."
+        "description": "Computer Engineering graduate and frontend developer at Ayesa Digital. Portfolio with projects in React, Next.js and TypeScript.",
+        "ogDescription": "Portfolio of Iker Alvis Veloso: frontend developer with experience in React, Next.js, TypeScript and Liferay.",
+        "twitterDescription": "Frontend development portfolio: React, Next.js, TypeScript and Liferay.",
+        "ogImageAlt": "Iker Alvis Veloso - Frontend developer portfolio"
     },
     "personal": {
         "role": "Liferay Frontend Developer",
-        "bio": "Computer Engineering graduate from the University of Deusto, currently working as a Liferay Frontend Developer at Ayesa Digital, building corporate portals with React and TypeScript. Specialized in designing intuitive interfaces that meet client requirements. Proactive and results-driven, focused on code quality, continuous learning, and collaboration within multidisciplinary teams to deliver innovative, value-driven solutions."
+        "bio": "Computer Engineering graduate from the University of Deusto and frontend developer at Ayesa Digital, building corporate portals with React and TypeScript. I specialize in intuitive interfaces that meet client requirements. Proactive and results-driven, focused on code quality, continuous learning and multidisciplinary teamwork."
     },
     "nav": {
         "home": "Home",
         "about": "About",
         "experience": "Experience",
         "projects": "Projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "skipToContent": "Skip to content",
+        "certifications": "Certifications",
+        "changeLanguage": "Change language",
+        "footerNav": "Footer navigation"
     },
     "hero": {
         "greeting": "Hi, I'm",
@@ -54,7 +59,7 @@
                     "position": "Internship - Front-End Developer",
                     "period": "Jun 2025 - Jun 2026",
                     "bullets": [
-                        "Development and implementation of pages and components on <strong>Liferay</strong> portals.",
+                        "Development and implementation of pages and components on corporate portals.",
                         "Creation of complex, modular features using <strong>Client Extensions</strong> built with <strong>React.js</strong> and <strong>JavaScript (ES6+)</strong>.",
                         "Responsible for <strong>bug</strong> fixing and evolutionary maintenance of applications to ensure optimal performance.",
                         "Collaboration in multidisciplinary teams applying the agile <strong>Scrum</strong> methodology."
@@ -179,5 +184,13 @@
         "rights": "All rights reserved",
         "madeWith": "Made with",
         "by": "by"
+    },
+    "share": {
+        "label": "Share",
+        "linkedin": "Share on LinkedIn",
+        "x": "Share on X",
+        "whatsapp": "Share on WhatsApp",
+        "copy": "Copy link",
+        "text": "Portfolio of Iker Alvis Veloso"
     }
 }

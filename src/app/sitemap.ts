@@ -3,7 +3,7 @@ import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/seo';
 
 // Actualiza esta fecha cuando cambie el contenido real de la página.
-const LAST_UPDATED = new Date('2026-09-18');
+const LAST_UPDATED = new Date('2026-10-05');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const languages: Record<string, string> = {

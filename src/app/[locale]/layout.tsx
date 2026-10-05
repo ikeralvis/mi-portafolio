@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -19,6 +19,15 @@ const inter = Inter({
   display: 'swap',
   preload: true,
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -45,24 +54,14 @@ export async function generateMetadata({
     keywords: [
       "Iker Alvis Veloso",
       "Liferay Frontend Developer",
-      "Liferay Developer",
-      "Frontend Developer",
       "Desarrollador Frontend",
-      "React Developer",
+      "React",
       "Next.js",
       "TypeScript",
-      "JavaScript",
-      "Liferay",
-      "Tailwind CSS",
       "Portfolio",
-      "Ayesa Digital",
-      "Universidad de Deusto",
       "Bilbao",
-      "España",
-      "Graduado en Ingeniería Informática",
-      "Computer Engineering Graduate",
-      "Proyectos con React",
-      "Desarrollo web moderno"
+      "Ayesa Digital",
+      "Universidad de Deusto"
     ],
     authors: [{ name: "Iker Alvis Veloso", url: "https://github.com/ikeralvis" }],
     applicationName: "Iker Alvis",
@@ -92,7 +91,7 @@ export async function generateMetadata({
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Iker Alvis Veloso - Liferay Frontend Developer Portfolio",
+          alt: t('ogImageAlt'),
         },
       ],
     },
@@ -126,19 +125,16 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
 
   return (
     <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="tiZShbIP9iXkI7sKRl0uBUpEPisZGATKlzLvP_czs6I" />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <JsonLd locale={locale} />
       </head>
       <body className={`${inter.variable} antialiased`} suppressHydrationWarning>
+        <a href="#main" className="skip-link">{tNav('skipToContent')}</a>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider>
             <MotionConfig reducedMotion="user">

@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { easeVercel, fadeInUp, fadeInUpDelayed, viewportOnce } from '@/lib/motion';
 import { handleSpotlightMove } from '@/lib/spotlight';
 
-const richStrong = { strong: (chunks: React.ReactNode) => <strong>{chunks}</strong> };
+const richStrong = { strong: (chunks: React.ReactNode) => <span className="font-semibold text-zinc-900 dark:text-white">{chunks}</span> };
 
 export default function Experience() {
   const t = useTranslations('experience');
@@ -90,9 +90,9 @@ export default function Experience() {
                     i === 0 ? 'bg-blue-500 dark:bg-blue-400' : 'bg-black/20 dark:bg-white/30'
                   }`}
                 />
-                <h4 className="font-semibold text-zinc-900 dark:text-white">
+                <p className="font-semibold text-zinc-900 dark:text-white">
                   {t(`${experience.id}.roles.${roleId}.position`)}
-                </h4>
+                </p>
                 <p className="mb-2 text-sm text-zinc-500 dark:text-gray-500">
                   {t(`${experience.id}.roles.${roleId}.period`)}
                 </p>

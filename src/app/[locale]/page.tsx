@@ -7,7 +7,7 @@ import Contact from '@/components/sections/Contact';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
+    <main id="main" className="relative min-h-screen">
       {/* Background gradient */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-100 via-white to-white dark:from-gray-900 dark:via-black dark:to-black" />

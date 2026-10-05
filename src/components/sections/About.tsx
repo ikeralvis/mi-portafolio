@@ -64,7 +64,7 @@ export default function About() {
                       className="flex items-center gap-3 text-zinc-700 dark:text-gray-300"
                     >
                       {Icon ? (
-                        <Icon
+                        <Icon aria-hidden="true"
                           className="h-5 w-5 shrink-0"
                           style={{ color: iconData.color }}
                         />

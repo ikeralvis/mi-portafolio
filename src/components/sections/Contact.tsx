@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import { Check, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
+import ShareLinks from '@/components/ShareLinks';
 import {
   easeVercel,
   fadeInUp,
@@ -18,6 +19,7 @@ import {
 export default function Contact() {
   const t = useTranslations('contact');
   const tFooter = useTranslations('footer');
+  const tNav = useTranslations('nav');
   const locale = useLocale();
   const [emailCopied, setEmailCopied] = useState(false);
   const [downloading, setDownloading] = useState(false);
@@ -151,6 +153,20 @@ export default function Contact() {
             transition={{ delay: 0.4, duration: 0.6, ease: easeVercel }}
             className="mt-12 border-t border-black/10 pt-8 text-sm text-zinc-500 dark:border-white/10 dark:text-gray-500"
           >
+            <nav aria-label={tNav('footerNav')} className="mb-6">
+              <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                {(['home', 'about', 'experience', 'projects', 'certifications', 'contact'] as const).map((id) => (
+                  <li key={id}>
+                    <a href={`#${id}`} className="link-underline text-zinc-600 dark:text-gray-400">
+                      {tNav(id)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="mb-6">
+              <ShareLinks />
+            </div>
             <p>
               © 2026 {portfolioData.personal.name}. {tFooter('rights')}.
             </p>

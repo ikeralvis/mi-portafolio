@@ -64,9 +64,9 @@ export default function Certifications() {
                     </div>
                   )}
                   <div>
-                    <h3 className="font-semibold text-zinc-900 dark:text-white">
+                    <p className="font-semibold text-zinc-900 dark:text-white">
                       {t(`items.${cert.id}.title`)}
-                    </h3>
+                    </p>
                     <p className="text-sm text-zinc-500 dark:text-gray-400">
                       {cert.issuer}
                       {cert.date ? ` · ${cert.date}` : ''}
@@ -91,7 +91,7 @@ export default function Certifications() {
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-blue-500/15 px-4 py-2 text-sm font-medium text-blue-700 transition-all hover:bg-blue-500/25 dark:bg-blue-500/20 dark:text-blue-300 dark:hover:bg-blue-500/30 dark:hover:text-blue-200"
+                    className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-blue-500/15 px-4 py-2 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-500/25 dark:bg-blue-500/20 dark:text-blue-300 dark:hover:bg-blue-500/30 dark:hover:text-blue-200"
                   >
                     <ExternalLink className="h-4 w-4" />
                     {t('viewCredential')}

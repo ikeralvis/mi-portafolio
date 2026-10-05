@@ -12,14 +12,6 @@ export default function Hero() {
   const tPersonal = useTranslations('personal');
   const shouldReduceMotion = useReducedMotion();
 
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   const rise = (delay: number) => ({
     initial: { opacity: 0, y: shouldReduceMotion ? 0 : 16 },
     animate: { opacity: 1, y: 0 },
@@ -41,16 +33,14 @@ export default function Hero() {
               {t('greeting')}
             </motion.p>
 
-            <motion.h1
-              {...rise(0.2)}
-              className="text-5xl font-bold tracking-tight text-zinc-900 dark:text-white md:text-7xl"
-            >
-              {portfolioData.personal.name}
+            <motion.h1 {...rise(0.2)} className="space-y-3">
+              <span className="block text-5xl font-bold tracking-tight text-zinc-900 dark:text-white md:text-7xl">
+                {portfolioData.personal.name}
+              </span>
+              <span className="gradient-text block text-3xl font-semibold md:text-4xl">
+                {tPersonal('role')}
+              </span>
             </motion.h1>
-
-            <motion.h2 {...rise(0.3)} className="gradient-text text-3xl font-semibold md:text-4xl">
-              {tPersonal('role')}
-            </motion.h2>
 
             <motion.p
               {...rise(0.4)}
@@ -65,47 +55,47 @@ export default function Hero() {
                 href={portfolioData.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass rounded-full p-3 text-zinc-700 transition-all hover:glass-strong hover:text-zinc-900 dark:text-gray-200 dark:hover:text-white"
+                className="glass rounded-full p-3 text-zinc-700 transition-colors hover:glass-strong hover:text-zinc-900 dark:text-gray-200 dark:hover:text-white"
                 aria-label="GitHub"
               >
-                <Github className="h-5 w-5" />
+                <Github aria-hidden="true" className="h-5 w-5" />
               </a>
               <a
                 href={portfolioData.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass rounded-full p-3 text-zinc-700 transition-all hover:glass-strong hover:text-zinc-900 dark:text-gray-200 dark:hover:text-white"
+                className="glass rounded-full p-3 text-zinc-700 transition-colors hover:glass-strong hover:text-zinc-900 dark:text-gray-200 dark:hover:text-white"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin aria-hidden="true" className="h-5 w-5" />
               </a>
               <a
                 href={portfolioData.social.email}
-                className="glass rounded-full p-3 text-zinc-700 transition-all hover:glass-strong hover:text-zinc-900 dark:text-gray-200 dark:hover:text-white"
+                className="glass rounded-full p-3 text-zinc-700 transition-colors hover:glass-strong hover:text-zinc-900 dark:text-gray-200 dark:hover:text-white"
                 aria-label="Email"
               >
-                <Mail className="h-5 w-5" />
+                <Mail aria-hidden="true" className="h-5 w-5" />
               </a>
             </motion.div>
 
             {/* CTA Buttons */}
             <motion.div {...rise(0.6)} className="flex flex-wrap gap-4">
-              <motion.button
-                onClick={scrollToProjects}
+              <motion.a
+                href="#projects"
                 whileHover={shouldReduceMotion ? undefined : { scale: 1.02, transition: springHover }}
                 whileTap={shouldReduceMotion ? undefined : { scale: 0.97, transition: springTap }}
-                className="shine-cta glass-strong rounded-full px-8 py-3 font-medium text-zinc-900 dark:text-white"
+                className="shine-cta glass-strong inline-block rounded-full px-8 py-3 font-medium text-zinc-900 dark:text-white"
               >
                 {t('cta')}
-              </motion.button>
-              <motion.button
-                onClick={scrollToContact}
+              </motion.a>
+              <motion.a
+                href="#contact"
                 whileHover={shouldReduceMotion ? undefined : { scale: 1.02, transition: springHover }}
                 whileTap={shouldReduceMotion ? undefined : { scale: 0.97, transition: springTap }}
-                className="rounded-full border border-black/15 px-8 py-3 font-medium text-zinc-900 transition-colors hover:bg-black/5 dark:border-white/20 dark:text-white dark:hover:bg-white/5"
+                className="inline-block rounded-full border border-black/15 px-8 py-3 font-medium text-zinc-900 transition-colors hover:bg-black/5 dark:border-white/20 dark:text-white dark:hover:bg-white/5"
               >
                 {t('contact')}
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -120,7 +110,7 @@ export default function Hero() {
               {portfolioData.personal.photo ? (
                 <Image
                   src={portfolioData.personal.photo}
-                  alt={portfolioData.personal.name}
+                  alt={`${portfolioData.personal.name} - ${tPersonal('role')}`}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
@@ -135,8 +125,8 @@ export default function Hero() {
               )}
             </div>
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-blue-500/20 blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-purple-500/20 blur-2xl" />
+            <div aria-hidden="true" className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-blue-500/20 blur-2xl" />
+            <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-purple-500/20 blur-2xl" />
           </motion.div>
         </div>
 
@@ -151,7 +141,7 @@ export default function Hero() {
             animate={shouldReduceMotion ? {} : { y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
-            <ArrowDown className="h-6 w-6 text-zinc-400 dark:text-gray-400" />
+            <ArrowDown aria-hidden="true" className="h-6 w-6 text-zinc-400 dark:text-gray-400" />
           </motion.div>
         </motion.div>
       </div>

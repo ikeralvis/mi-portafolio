@@ -1,15 +1,28 @@
 # Iker Alvis Veloso
 
-> Liferay Frontend Developer en Ayesa Digital (Bilbao, España). Graduado en Ingeniería Informática por la Universidad de Deusto. Desarrolla portales corporativos con React, TypeScript y Liferay, y proyectos propios con Next.js.
-
-Portfolio personal, disponible en español e inglés.
+> Desarrollador frontend (Liferay, React, TypeScript) en Ayesa Digital, Bilbao (España). Graduado en Ingeniería Informática por la Universidad de Deusto. Portfolio bilingüe (ES/EN) con proyectos propios en Next.js.
 
 ## Páginas
 
-- [Portfolio (ES)](https://ikeralvis-dev.vercel.app): Sobre mí, experiencia, proyectos y contacto.
+- [Portfolio (ES)](https://ikeralvis-dev.vercel.app): Stack, experiencia, proyectos, certificados y contacto.
 - [Portfolio (EN)](https://ikeralvis-dev.vercel.app/en): Same content in English.
 - [CV (ES)](https://ikeralvis-dev.vercel.app/CV_Iker_Es.pdf)
 - [CV (EN)](https://ikeralvis-dev.vercel.app/CV_Iker_En.pdf)
+
+## Experiencia
+
+- Ayesa Digital: Liferay Frontend Developer (desde jul 2026); prácticas front-end (jun 2025 - jun 2026).
+- DeustoTech (DEUSTEK / MoreLAB): becario de investigación (feb - jul 2026). Modelo de predicción de precios de carburantes y microservicios con API REST (TankGo).
+- Universidad de Deusto: Grado en Ingeniería Informática (2022 - 2026).
+
+## Proyectos
+
+- [TankGo](https://tankgo.dev): comparador de precios de carburante con predicción a 7 días (Proyecto de Fin de Grado).
+- [Fintek](https://fintek-app.vercel.app/): finanzas personales con Next.js, Supabase y PWA.
+- [BilboTrans](https://bilbotrans.vercel.app/): Metro Bilbao en tiempo real ([código](https://github.com/ikeralvis/bilbotrans)).
+- Waytro: gestor de viajes e itinerarios (en desarrollo).
+- [CityInsight](https://ikeralvis.github.io/CityInsight/): IA generativa para ayuntamientos; finalista de OA6 for University (IBM Consulting).
+- [StudioTools](https://studiotools.netlify.app/) y [Pinfluence](https://pinfluence-clone.vercel.app/).
 
 ## Perfiles
 
@@ -18,4 +31,8 @@ Portfolio personal, disponible en español e inglés.
 
 ## Stack
 
-React, Next.js, TypeScript, JavaScript, Tailwind CSS, Liferay, MongoDB, PostgreSQL, MySQL, Scrum.
+React, Next.js, TypeScript, JavaScript, Tailwind CSS, Liferay, Supabase, MongoDB, PostgreSQL, MySQL, Docker, Scrum.
+
+## Idiomas
+
+Español (nativo), inglés (B2 Cambridge First), euskera (B2 HABE).

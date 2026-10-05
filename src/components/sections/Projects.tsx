@@ -86,7 +86,7 @@ export default function Projects() {
                       className="flex items-center gap-1.5 rounded-full bg-black/5 px-3 py-1 text-xs text-zinc-700 dark:bg-white/5 dark:text-gray-300"
                       title={tech}
                     >
-                      {Icon && <Icon className="h-3 w-3" style={{ color: iconData.color }} />}
+                      {Icon && <Icon aria-hidden="true" className="h-3 w-3" style={{ color: iconData.color }} />}
                       {tech}
                     </span>
                   );
@@ -99,7 +99,7 @@ export default function Projects() {
                     href={highlightProject.repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-lg bg-black/5 px-5 py-2.5 text-sm font-medium text-zinc-700 transition-all hover:bg-black/10 hover:text-zinc-900 dark:bg-white/5 dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                    className="flex items-center justify-center gap-2 rounded-lg bg-black/5 px-5 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-black/10 hover:text-zinc-900 dark:bg-white/5 dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                   >
                     <Code2 className="h-4 w-4" />
                     {t('viewCode')}
@@ -110,7 +110,7 @@ export default function Projects() {
                     href={highlightProject.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-lg bg-blue-500/15 px-5 py-2.5 text-sm font-medium text-blue-700 transition-all hover:bg-blue-500/25 dark:bg-blue-500/20 dark:text-blue-300 dark:hover:bg-blue-500/30 dark:hover:text-blue-200"
+                    className="flex items-center justify-center gap-2 rounded-lg bg-blue-500/15 px-5 py-2.5 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-500/25 dark:bg-blue-500/20 dark:text-blue-300 dark:hover:bg-blue-500/30 dark:hover:text-blue-200"
                   >
                     <ExternalLink className="h-4 w-4" />
                     {t('viewDemoShort')}
@@ -132,7 +132,7 @@ export default function Projects() {
           <motion.button
             variants={fadeInItem}
             onClick={() => setFilter('all')}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
               filter === 'all'
                 ? 'glass-strong text-zinc-900 dark:text-white'
                 : 'glass text-zinc-500 hover:text-zinc-900 dark:text-gray-400 dark:hover:text-white'
@@ -153,13 +153,13 @@ export default function Projects() {
                 key={tech}
                 variants={fadeInItem}
                 onClick={() => setFilter(tech)}
-                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   filter === tech
                     ? 'glass-strong text-zinc-900 dark:text-white'
                     : 'glass text-zinc-500 hover:text-zinc-900 dark:text-gray-400 dark:hover:text-white'
                 }`}
               >
-                {Icon && <Icon className="h-4 w-4" style={{ color: iconData.color }} />}
+                {Icon && <Icon aria-hidden="true" className="h-4 w-4" style={{ color: iconData.color }} />}
                 {tech} ({count})
               </motion.button>
             );
@@ -236,7 +236,7 @@ export default function Projects() {
                         className="flex items-center gap-1.5 rounded-full bg-black/5 px-3 py-1 text-xs text-zinc-600 dark:bg-white/5 dark:text-gray-400"
                         title={tech}
                       >
-                        {Icon && <Icon className="h-3 w-3" style={{ color: iconData.color }} />}
+                        {Icon && <Icon aria-hidden="true" className="h-3 w-3" style={{ color: iconData.color }} />}
                         {tech}
                       </span>
                     );
@@ -255,7 +255,7 @@ export default function Projects() {
                       href={project.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-black/5 px-4 py-2 text-sm font-medium text-zinc-700 transition-all hover:bg-black/10 hover:text-zinc-900 dark:bg-white/5 dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-black/5 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-black/10 hover:text-zinc-900 dark:bg-white/5 dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                     >
                       <Code2 className="h-4 w-4" />
                       {t('viewCode')}
@@ -266,7 +266,7 @@ export default function Projects() {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-blue-500/15 px-4 py-2 text-sm font-medium text-blue-700 transition-all hover:bg-blue-500/25 dark:bg-blue-500/20 dark:text-blue-300 dark:hover:bg-blue-500/30 dark:hover:text-blue-200"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-blue-500/15 px-4 py-2 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-500/25 dark:bg-blue-500/20 dark:text-blue-300 dark:hover:bg-blue-500/30 dark:hover:text-blue-200"
                     >
                       <ExternalLink className="h-4 w-4" />
                       {t('viewDemoShort')}
@@ -311,9 +311,9 @@ export default function Projects() {
               <Trophy className="h-5 w-5 text-yellow-500 dark:text-yellow-300" />
             </div>
             <div>
-              <h4 className="font-semibold text-zinc-900 dark:text-white">
+              <p className="font-semibold text-zinc-900 dark:text-white">
                 {t('competition.title')}
-              </h4>
+              </p>
               <p className="mb-3 text-sm text-zinc-500 dark:text-gray-400">
                 {t('competition.organizer')}
               </p>
