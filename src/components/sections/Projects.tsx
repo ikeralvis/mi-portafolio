@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { ExternalLink, Code2, Star } from 'lucide-react';
+import { ExternalLink, Code2, Star, Trophy } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import { useState } from 'react';
 import { getIconForTech } from '@/lib/techIcons';
@@ -191,6 +191,12 @@ export default function Projects() {
                 </div>
               )}
 
+              {project.inDevelopment && (
+                <div className="absolute left-4 top-4 z-10 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-xs font-medium text-emerald-200 backdrop-blur-md">
+                  {t('inDevelopment')}
+                </div>
+              )}
+
               {/* Imagen del proyecto */}
               <div className="relative h-48 w-full overflow-hidden bg-linear-to-br from-blue-500/10 to-purple-500/10">
                 {project.image ? (
@@ -270,6 +276,53 @@ export default function Projects() {
               </div>
             </motion.article>
           ))}
+        </motion.div>
+
+        {/* Concursos y reconocimientos */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={fadeInUp}
+          className="mt-16"
+        >
+          <h3 className="mb-6 text-center text-2xl font-semibold text-zinc-900 dark:text-white">
+            {t('competition.heading')}
+          </h3>
+          <article
+            onMouseMove={handleSpotlightMove}
+            className="spotlight-card glass-strong relative mx-auto max-w-3xl overflow-hidden rounded-2xl border border-yellow-500/20"
+          >
+            <div className="grid grid-cols-3 gap-1">
+              {portfolioData.competitionPhotos.map((src) => (
+                <div key={src} className="relative aspect-[4/3] bg-linear-to-br from-yellow-500/10 to-blue-500/10">
+                  <Image
+                    src={src}
+                    alt={t('competition.photoAlt')}
+                    fill
+                    sizes="(max-width: 768px) 33vw, 256px"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="flex items-start gap-4 p-6">
+            <div className="glass-strong shrink-0 rounded-full p-2">
+              <Trophy className="h-5 w-5 text-yellow-500 dark:text-yellow-300" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-zinc-900 dark:text-white">
+                {t('competition.title')}
+              </h4>
+              <p className="mb-3 text-sm text-zinc-500 dark:text-gray-400">
+                {t('competition.organizer')}
+              </p>
+              <p className="text-sm leading-relaxed text-zinc-600 dark:text-gray-300">
+                {t('competition.description')}
+              </p>
+            </div>
+            </div>
+          </article>
         </motion.div>
 
         {/* Mensaje si no hay proyectos con ese filtro */}

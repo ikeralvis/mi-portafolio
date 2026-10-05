@@ -30,6 +30,16 @@ export interface PortfolioData {
     image?: string;
     featured?: boolean;
     highlight?: boolean;
+    inDevelopment?: boolean;
+  }[];
+  competitionPhotos: string[];
+  certifications: {
+    id: string;
+    issuer: string;
+    date?: string;
+    logo?: string;
+    credentialId?: string;
+    url?: string;
   }[];
 }
 
@@ -71,6 +81,12 @@ export const portfolioData: PortfolioData = {
       roleIds: ["current", "intern"]
     },
     {
+      id: "deustotech",
+      company: "DeustoTech - DEUSTEK / MoreLAB",
+      companyLogo: "/logos/deustotech.png",
+      type: "work"
+    },
+    {
       id: "deusto",
       company: "Universidad de Deusto",
       companyLogo: "/logos/deusto.png",
@@ -107,37 +123,83 @@ export const portfolioData: PortfolioData = {
       featured: true
     },
     {
+      id: "fintek",
+      name: "Fintek",
+      technologies: ["Next.js", "React", "TypeScript", "Supabase", "Google OAuth", "PWA"],
+      demoUrl: "https://fintek-app.vercel.app/",
+      image: "/projects/fintek.png",
+      featured: true
+    },
+    {
+      id: "waytro",
+      name: "Waytro",
+      technologies: ["Next.js", "React", "TypeScript", "PostgreSQL (Neon)"],
+      image: "/projects/waytro.png",
+      inDevelopment: true
+    },
+    {
+      id: "bilbotrans",
+      name: "BilboTrans",
+      technologies: ["Next.js", "React", "TypeScript"],
+      repoUrl: "https://github.com/ikeralvis/bilbotrans",
+      demoUrl: "https://bilbotrans.vercel.app/",
+      image: "/projects/bilbotrans.png",
+      inDevelopment: true
+    },
+    {
+      id: "blogs",
+      name: "Blogs",
+      technologies: ["Astro", "Netlify"],
+      image: "/projects/blogs.png",
+      inDevelopment: true
+    },
+    {
       id: "pinfluence",
       name: "Pinfluence Clone",
       technologies: ["React", "React Router", "Unsplash API", "LocalStorage"],
       repoUrl: "https://github.com/ikeralvis/pinfluence-clone",
       demoUrl: "https://pinfluence-clone.vercel.app/",
       image: "/projects/pinfluence.png"
+    }
+  ],
+  competitionPhotos: ["/projects/oa6-1.jpg", "/projects/oa6-2.jpg", "/projects/oa6-3.jpg"],
+  certifications: [
+    {
+      id: "ai-intro",
+      issuer: "LinkedIn Learning",
+      logo: "/logos/linkedin.png",
+      date: "2024-06",
+      credentialId: "76cb144debb0eae4a88bc07c004a0b10443c9372d4a924e9f78848db3fcb1d98",
+      url: "https://www.linkedin.com/learning/certificates/76cb144debb0eae4a88bc07c004a0b10443c9372d4a924e9f78848db3fcb1d98"
     },
     {
-      id: "gasolineras",
-      name: "Gasolineras España",
-      technologies: ["React", "Vite", "Tailwind CSS", "API Gobierno España"],
-      repoUrl: "https://github.com/ikeralvis/gasolineras-app",
-      demoUrl: "https://gasolineras-app-beta.vercel.app/",
-      image: "/projects/gasolineras.png"
+      id: "digital-skills",
+      issuer: "Google",
+      logo: "/logos/google.png",
+      date: "2024-05",
+      credentialId: "298873731",
+      url: "https://skillshop.exceedlms.com/student/award/dwQA5bJxJT6BqHAu8y7w2rq2"
     },
     {
-      id: "galeria-arte",
-      name: "Galería de Arte",
-      technologies: ["Django", "HTML5", "CSS3", "Python"],
-      repoUrl: "https://github.com/ikeralvis/GaleriaArte-IW"
-      // Pendiente: añadir public/projects/galeria.png (ver README de la carpeta)
-      // y restaurar `image: "/projects/galeria.png"`. Sin el archivo, next/image
-      // devolvía 400; se usa el fallback de emoji mientras tanto.
+      id: "web-intro",
+      issuer: "Google",
+      logo: "/logos/google.png",
+      date: "2024-05",
+      credentialId: "298833045",
+      url: "https://skillshop.exceedlms.com/student/award/7NtrwDU5QHXp8ToyG28bj4va"
     },
     {
-      id: "skin-care-routine",
-      name: "Skin Care Routine",
-      technologies: ["React", "Vite", "Tailwind CSS", "Firebase Auth", "Firebase Firestore"],
-      repoUrl: "https://github.com/ikeralvis/skincare-app",
-      demoUrl: "https://mikelskinrutine.netlify.app/",
-      image: "/projects/skin-care-routine.png"
+      id: "cambridge-b2",
+      issuer: "Cambridge English",
+      logo: "/logos/cambridge.png",
+      date: "2025"
+    },
+    {
+      id: "habe-b2",
+      issuer: "HABE · Eusko Jaurlaritza",
+      logo: "/logos/habe.png",
+      date: "2022-05",
+      credentialId: "J0D0Z-T3PQM-SR2R"
     }
   ]
 };

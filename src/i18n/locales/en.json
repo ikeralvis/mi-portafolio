@@ -62,6 +62,16 @@
                 }
             }
         },
+        "deustotech": {
+            "position": "Research Intern",
+            "company": "DeustoTech - DEUSTEK / MoreLAB",
+            "period": "Feb 2026 - Jul 2026",
+            "bullets": [
+                "Research internship in <strong>next-edge</strong> for <strong>DeustoTech</strong>, within the <strong>DEUSTEK / MoreLAB</strong> team.",
+                "Worked on the Bachelor's Thesis: building a <strong>fuel price prediction model</strong> (<strong>TankGo</strong> project).",
+                "Designed a cloud-deployed <strong>microservices</strong> infrastructure exposed through a <strong>REST API</strong>."
+            ]
+        },
         "deusto": {
             "position": "Computer Engineering Graduate",
             "company": "University of Deusto",
@@ -88,6 +98,7 @@
         "featured": "Featured",
         "all": "All",
         "thesisProject": "Bachelor's Thesis",
+        "inDevelopment": "In development",
         "noResults": "No projects with this technology",
         "items": {
             "tankgo": {
@@ -98,6 +109,18 @@
             },
             "cityinsight": {
                 "description": "🏆 1st Place, OA6 University of Deusto. Smart platform powered by generative AI to improve citizens' quality of life, detecting issues and offering quick solutions for local governments."
+            },
+            "fintek": {
+                "description": "Personal finance app to manage accounts, transactions and budgets. Version 2.0 with Google OAuth sign-in (Supabase Auth), installable as a PWA."
+            },
+            "waytro": {
+                "description": "Trip management app: itineraries, map, routes and planning in one place. Next.js with a Neon database."
+            },
+            "bilbotrans": {
+                "description": "Real-time view of the Bilbao Metro, with Bizkaibus integration planned."
+            },
+            "blogs": {
+                "description": "Personal blogs built with Astro and deployed on Netlify."
             },
             "pinfluence": {
                 "description": "Full-featured Pinterest clone: photo browsing, downloads, favorites, advanced search and dark mode. Powered by the Unsplash API."
@@ -110,6 +133,36 @@
             },
             "skin-care-routine": {
                 "description": "Web app to manage and track skincare routines. Lets users log products, track usage and get personalized recommendations."
+            }
+        },
+        "competition": {
+            "heading": "Competitions & awards",
+            "title": "OA6 for University (3rd edition) · IBM Consulting",
+            "organizer": "Deusto phase winners and finalists · Feb - Jun 2025",
+            "description": "IBM Consulting's entrepreneurship and innovation initiative bringing together university talent from across Spain to tackle social challenges with generative AI and data. We won the University of Deusto phase (and the Liga Deusto) and took part in the national final presenting CityInsight: a tool that brings citizens' voices to city councils and offers real solutions based on generative AI and data. Months of teamwork with mentoring from IBM professionals (Lean Canvas, Business Case, Design Thinking).",
+            "photoAlt": "OA6 for University final"
+        }
+    },
+    "certifications": {
+        "title": "Certifications & Achievements",
+        "description": "Additional training, languages and recognitions",
+        "credentialId": "Credential ID",
+        "viewCredential": "View credential",
+        "items": {
+            "ai-intro": {
+                "title": "Introduction to Artificial Intelligence"
+            },
+            "digital-skills": {
+                "title": "Digital Skills for Professionals"
+            },
+            "web-intro": {
+                "title": "Introduction to Web Development: HTML and CSS (1/2)"
+            },
+            "cambridge-b2": {
+                "title": "English B2 First (Cambridge)"
+            },
+            "habe-b2": {
+                "title": "Basque B2 (HABE)"
             }
         }
     },

@@ -62,6 +62,16 @@
                 }
             }
         },
+        "deustotech": {
+            "position": "Becario de investigación",
+            "company": "DeustoTech - DEUSTEK / MoreLAB",
+            "period": "Feb 2026 - Jul 2026",
+            "bullets": [
+                "Beca de investigación en <strong>next-edge</strong> para <strong>DeustoTech</strong>, dentro del equipo <strong>DEUSTEK / MoreLAB</strong>.",
+                "Trabajo en el Proyecto de Fin de Grado: creación de un <strong>modelo de predicción de precios de carburantes</strong> (proyecto <strong>TankGo</strong>).",
+                "Diseño de una infraestructura de <strong>microservicios</strong> desplegada en la nube y expuesta mediante una <strong>API REST</strong>."
+            ]
+        },
         "deusto": {
             "position": "Graduado en Ingeniería Informática",
             "company": "Universidad de Deusto",
@@ -88,6 +98,7 @@
         "featured": "Destacado",
         "all": "Todos",
         "thesisProject": "Proyecto de Fin de Grado",
+        "inDevelopment": "En desarrollo",
         "noResults": "No hay proyectos con esta tecnología",
         "items": {
             "tankgo": {
@@ -98,6 +109,18 @@
             },
             "cityinsight": {
                 "description": "🏆 1er Puesto OA6 University Deusto. Plataforma inteligente con IA generativa para mejorar la calidad de vida ciudadana, detectando problemas y ofreciendo soluciones rápidas a los gobiernos."
+            },
+            "fintek": {
+                "description": "Aplicación de finanzas personales para gestionar cuentas, movimientos y presupuestos. Versión 2.0 con autenticación mediante Google OAuth (Supabase Auth), instalable como PWA."
+            },
+            "waytro": {
+                "description": "App para gestionar viajes: itinerarios, mapa, rutas y planificación en un solo lugar. Next.js con base de datos en Neon."
+            },
+            "bilbotrans": {
+                "description": "Consulta en tiempo real del Metro Bilbao, con integración futura de Bizkaibus."
+            },
+            "blogs": {
+                "description": "Blogs personales construidos con Astro y desplegados en Netlify."
             },
             "pinfluence": {
                 "description": "Clon de Pinterest con funcionalidad completa: visualización de fotos, descarga, favoritos, búsqueda avanzada y modo oscuro. Utiliza la API de Unsplash."
@@ -110,6 +133,36 @@
             },
             "skin-care-routine": {
                 "description": "Aplicación web para gestionar y seguir rutinas de cuidado de la piel. Permite a los usuarios registrar productos, realizar un seguimiento de su uso y obtener recomendaciones personalizadas."
+            }
+        },
+        "competition": {
+            "heading": "Concursos y reconocimientos",
+            "title": "OA6 for University (3.ª edición) · IBM Consulting",
+            "organizer": "Ganadores de la fase Deusto y finalistas · Feb - Jun 2025",
+            "description": "Iniciativa de emprendimiento e innovación de IBM Consulting que reúne a talento universitario de toda España para afrontar retos sociales con IA generativa y datos. Ganamos la fase de la Universidad de Deusto (y la Liga Deusto) y participamos en la final nacional presentando CityInsight: una herramienta que acerca la voz de la ciudadanía a los ayuntamientos y les ofrece soluciones reales basadas en IA generativa y datos. Meses de trabajo en equipo con mentoría de profesionales de IBM (Lean Canvas, Business Case, Design Thinking).",
+            "photoAlt": "Final de OA6 for University"
+        }
+    },
+    "certifications": {
+        "title": "Certificados y logros",
+        "description": "Formación complementaria, idiomas y reconocimientos",
+        "credentialId": "ID de la credencial",
+        "viewCredential": "Ver credencial",
+        "items": {
+            "ai-intro": {
+                "title": "Introduction to Artificial Intelligence"
+            },
+            "digital-skills": {
+                "title": "Competencias digitales para profesionales"
+            },
+            "web-intro": {
+                "title": "Curso de introducción al desarrollo web: HTML y CSS (1/2)"
+            },
+            "cambridge-b2": {
+                "title": "Inglés B2 First (Cambridge)"
+            },
+            "habe-b2": {
+                "title": "Euskera B2 (HABE)"
             }
         }
     },

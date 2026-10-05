@@ -22,6 +22,10 @@ import {
   SiGooglecloud,
   SiGooglegemini,
   SiPwa,
+  SiSupabase,
+  SiGoogle,
+  SiAstro,
+  SiNetlify,
 } from 'react-icons/si';
 import { FaJava, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
 import { TrendingUp } from 'lucide-react';
@@ -66,6 +70,10 @@ export const techIcons: TechIconMap = {
   'Gemini API': { icon: SiGooglegemini, color: '#8E75B2' },
   'LightGBM': { icon: TrendingUp, color: '#00A99D' },
   'PWA': { icon: SiPwa, color: '#5A0FC8' },
+  'Supabase': { icon: SiSupabase, color: '#3ECF8E' },
+  'Google OAuth': { icon: SiGoogle, color: '#4285F4' },
+  'Astro': { icon: SiAstro, color: '#BC52EE' },
+  'Netlify': { icon: SiNetlify, color: '#00C7B7' },
 
   // Tools
   'Docker': { icon: SiDocker, color: '#2496ED' },
